@@ -200,8 +200,24 @@
 
   var qs = new URLSearchParams(location.search);
   var lang = qs.get('lang') || localStorage.getItem('lian_lang') || 'zh';
-  if (String(lang).toLowerCase().indexOf('en') === 0) {
+  var on = false;
+
+  function enable() {
+    if (on) return;
+    on = true;
+    try { document.documentElement.lang = 'en'; } catch (e) { /* ignore */ }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
     else start();
   }
+
+  if (String(lang).toLowerCase().indexOf('en') === 0) enable();
+
+  // 父页面（数字人主站）切换语言后写 localStorage，内嵌页通过 storage 事件跟随
+  window.addEventListener('storage', function (e) {
+    if (e && e.key === 'lian_lang' && String(e.newValue || '').toLowerCase().indexOf('en') === 0) enable();
+  });
+  window.addEventListener('message', function (e) {
+    var d = e && e.data;
+    if (d && d.type === 'lian-lang' && String(d.lang || '').toLowerCase().indexOf('en') === 0) enable();
+  });
 })();

@@ -57,6 +57,15 @@ button{font-family:inherit;}
   border:1px solid var(--line);font-size:12px;transition:.18s;
 }
 .ghost:hover{color:var(--text);border-color:rgba(53,224,255,.5);}
+.voice-select{
+  max-width:168px;height:30px;padding:0 8px;border-radius:9px;cursor:pointer;
+  color:var(--muted);background:rgba(255,255,255,.03);
+  border:1px solid var(--line);font-size:12px;outline:none;
+  appearance:none;-webkit-appearance:none;text-overflow:ellipsis;
+}
+.voice-select:hover{color:var(--text);border-color:rgba(53,224,255,.5);}
+.voice-select:disabled{opacity:.45;cursor:default;}
+.voice-select option{background:#11151f;color:#dfe6f5;}
 
 .layout{
   flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
