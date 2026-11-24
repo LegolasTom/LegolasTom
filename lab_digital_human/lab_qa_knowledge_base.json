@@ -1,0 +1,496 @@
+{
+  "schema_version": "1.0.0",
+  "language": "zh-CN",
+  "scene": "lab_digital_human_qa",
+  "generated_at": "2026-11-02",
+  "note": "福建省联迪移动支付研究与应用重点实验室 数字人【主知识库】。qa_knowledge_base 每条记录含 intent（意图键）、keywords（匹配问法）、answer（数字人口播回答）。store 供展示与基础问答。内容基于实验室向量化知识库整理。",
+  "store": {
+    "name": "福建省联迪移动支付研究与应用重点实验室",
+    "short_name": "联迪移动支付重点实验室",
+    "en_name": "Fujian Landing Mobile Payment Research & Application Key Laboratory",
+    "slogan": "让支付更安全，让科技更有温度",
+    "city": "福州",
+    "founded_year": 2015,
+    "authority": "福建省科技厅授牌的省级重点实验室",
+    "host_unit": "福建联迪商用设备有限公司",
+    "supervisor": "福州市科学技术局",
+    "director": "刘世英",
+    "area_sqm": 500,
+    "equipment_invest": "3000多万元",
+    "equipment_sets": "100余套",
+    "test_robots": 10,
+    "phone_lib": "800多款（近千台）手机",
+    "patents": {"invention": 57, "utility_model": 20},
+    "research_directions": ["移动支付信息安全技术研究", "人工智能技术在移动支付的应用研究", "物联网技术在移动支付的应用研究", "大数据技术在移动支付的应用研究", "蓝牙支付协议栈研究", "扫码识别技术", "NFC支付技术", "自动化测试技术", "人脸识别测试技术"]
+  },
+  "qa_knowledge_base": [
+    {
+      "id": "q_001",
+      "category": "实验室简介",
+      "intent": "lab_intro",
+      "question": "这里是什么地方",
+      "keywords": ["什么地方", "这是什么地方", "这个实验室", "介绍一下实验室", "实验室是干嘛的", "你们是什么单位", "这里做什么"],
+      "answer": "这里是福建省联迪移动支付研究与应用重点实验室，2015年由省科技厅授牌，依托福建联迪商用设备有限公司建设运营，专注移动支付领域的应用研究。我是这里的AI讲解员小联，欢迎您来参观~",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_002",
+      "category": "实验室简介",
+      "intent": "lab_founded",
+      "question": "实验室是什么时候成立的",
+      "keywords": ["什么时候成立", "成立时间", "哪一年建的", "成立多久", "什么时候建的", "几年了"],
+      "answer": "实验室成立于2015年，是福建省科技厅授牌的省级重点实验室，到今年已经走过十多个年头，移动支付技术也一路升级换代，我和实验室一起解锁的时代可多了！",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_003",
+      "category": "实验室简介",
+      "intent": "lab_host_unit",
+      "question": "实验室的依托单位是谁",
+      "keywords": ["依托单位", "谁建的", "哪个公司", "母公司", "挂靠单位", "谁出资"],
+      "answer": "实验室依托福建联迪商用设备有限公司建设并开展科研工作，业务主管部门是福州市科学技术局。联迪商用是做支付终端的老牌企业，咱们实验室的技术成果很多都直接落到了它的产品上。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_004",
+      "category": "实验室简介",
+      "intent": "lab_director",
+      "question": "实验室主任是谁",
+      "keywords": ["实验室主任", "负责人是谁", "谁负责", "主任叫什么", "领导是谁", "谁当家"],
+      "answer": "实验室主任是刘世英。实验室还有规范的组织管理体系，比如每年召开学术委员会会议、建立三级安全责任体系，管理可是相当严谨的，欢迎参观了解~",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_005",
+      "category": "研究方向",
+      "intent": "lab_research",
+      "question": "实验室的研究方向有哪些",
+      "keywords": ["研究方向", "研究什么", "科研方向", "都有哪些方向", "搞什么研究", "课题方向", "核心技术方向"],
+      "answer": "实验室早期确立了蓝牙支付协议栈、扫码识别、NFC支付、自动化测试、人脸识别测试五大研究方向；近年来进一步聚焦移动支付信息安全、人工智能、物联网和大数据在移动支付中的应用四大方向。想深入听哪个，我给您细讲~",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_006",
+      "category": "实验室简介",
+      "intent": "lab_scale",
+      "question": "实验室有多大",
+      "keywords": ["多大", "多少平米", "面积", "规模", "有多大场地", "实验室规模"],
+      "answer": "实验室占地约500平方米，累计投入3000多万元采购了100余套先进检测设备，还自主研发了10套针对不同移动支付场景的测试机器人，以及可容纳800多款手机的兼容性测试实验室，规模在行业里算是相当扎实了。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_007",
+      "category": "科研成果",
+      "intent": "lab_patents",
+      "question": "实验室有多少专利",
+      "keywords": ["专利", "专利数量", "多少项专利", "发明专利", "知识产权", "专利墙"],
+      "answer": "截至2018年底，实验室共获得57项发明专利授权和20项实用新型专利授权。您看那边那面专利墙，一个个证书排得满满的，都是科研伙伴们的心血结晶！",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_008",
+      "category": "技术与成果-蓝牙",
+      "intent": "tech_bluetooth",
+      "question": "蓝牙协议栈技术怎么样",
+      "keywords": ["蓝牙协议栈", "蓝牙技术", "手机配对", "蓝牙支付", "闪付", "蓝牙兼容"],
+      "answer": "实验室自主研发的蓝牙支付协议栈达到国际领先水平，兼容手机超过800款，打破了国外企业在蓝牙协议栈领域的垄断。其中发明专利“蓝牙手机配对金融卡终端实现的方法”还荣获福州市专利金奖，应用该技术的终端产品累计出货超1000万台，远销美国、印度、俄罗斯等国家。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_009",
+      "category": "技术与成果-扫码",
+      "intent": "tech_scan",
+      "question": "扫码机器人是什么",
+      "keywords": ["扫码机器人", "扫码测试", "扫码识别", "扫码技术", "A8", "扫码支付", "扫描机器人"],
+      "answer": "扫码测试机器人和扫码技术都是实验室自主研发的成果，“扫码测试机器人的研发及应用项目”还入选了2017年福州市科技计划项目，产品被国家计算机检测中心采购作为官方检测设备。集成自有扫码算法的联迪A8智能POS机累计售出400万台，占据约70%市场份额，也是首次把金融卡支付和手机扫码支付集成在同一个入口终端上。",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_010",
+      "category": "场地与设备",
+      "intent": "lab_phone_lab",
+      "question": "手机兼容性测试实验室有什么特别之处",
+      "keywords": ["兼容性测试", "手机实验室", "多少台手机", "手机兼容", "手机库", "兼容性实验"],
+      "answer": "实验室建有拥有800多款（近千台）手机的兼容性测试实验室，可覆盖蓝牙、NFC、音频、声波、APP及各类移动支付应用的手机兼容性验证，这在建设时填补了国内同类领域的空白，也确保我们的产品能和市面上主流手机'和平共处'~",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_011",
+      "category": "场地与设备",
+      "intent": "lab_reliability_lab",
+      "question": "可靠性测试有哪些试验室",
+      "keywords": ["可靠性测试", "试验室", "可靠性实验室", "环境试验", "可靠性试验", "哪个实验室做测试"],
+      "answer": "实验室的可靠性测试体系包括四大试验室：气候环境试验室、失效分析试验室、机械环境试验室和综合试验室，可按照IEC、MIL、ISO、GB、GJB等标准开展各类可靠性试验，从高低温湿热到振动跌落全覆盖。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_012",
+      "category": "场地与设备",
+      "intent": "lab_climatic_lab",
+      "question": "气候环境试验室能做什么测试",
+      "keywords": ["气候环境", "恒温恒湿", "冷热冲击", "盐雾", "高低温", "湿热试验", "气候实验"],
+      "answer": "气候环境试验室可模拟各种高低温、湿热、冷热冲击、盐雾等气候环境条件，配备可程式恒温恒湿试验机、冷热冲击试验机和盐水喷雾试验机，按IEC、MIL、ISO、GB、GJB等各种标准或客户要求开展气候环境试验。",
+      "related_page": "/teardown/high-low-live.html"
+    },
+    {
+      "id": "q_013",
+      "category": "场地与设备",
+      "intent": "lab_failure_lab",
+      "question": "失效分析试验室是做什么的",
+      "keywords": ["失效分析", "金相切片", "染色渗透", "红墨水", "MLCC", "切片分析", "失效分析实验室"],
+      "answer": "失效分析试验室针对试验后、生产或市场反馈的产品失效，用显微镜等手段明确失效模式、找到失效原因、确定失效机理。主要手段包括金相切片分析、染色渗透（红墨水）试验、片式多层陶瓷电容器（MLCC）失效分析等，帮产品找出'病根'再对症下药。",
+      "related_page": "/teardown/dye-live.html"
+    },
+    {
+      "id": "q_014",
+      "category": "场地与设备",
+      "intent": "lab_mechanical_lab",
+      "question": "机械环境试验室有哪些设备",
+      "keywords": ["机械环境", "振动试验", "跌落试验", "落球冲击", "静电放电", "按键寿命", "插拔试验", "雷击浪涌", "机械试验设备"],
+      "answer": "机械环境试验室可开展各种振动、跌落等试验，设备包括电动振动试验系统、包装落下试验机、重复跌落试验机、回转滚筒试验机、砂尘试验机、落球冲击试验机、静电放电试验系统、雷击浪涌发生器、IC卡插拔试验机、按键寿命试验机、线材弯折试验机、铅笔硬度试验机、摩擦试验机、万能拉伸机等，还自行设计了IC卡插拔试验机等定制设备。",
+      "related_page": "/teardown/tumble-live.html"
+    },
+    {
+      "id": "q_015",
+      "category": "场地与设备",
+      "intent": "lab_machine_vision",
+      "question": "机器视觉实验室有什么",
+      "keywords": ["机器视觉", "视觉实验室", "扫码性能", "景深", "识别角度", "照明箱", "图像质量", "白平衡"],
+      "answer": "机器视觉实验室里有我们工程师自主研发的扫码机器人，可测试扫码的景深、识别角度、识别精度、运动容差等性能；还有用于测试图像质量的摄像头测试照明箱，可评估分辨率、色彩还原、白平衡等指标。",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_016",
+      "category": "场地与设备",
+      "intent": "lab_robot_center",
+      "question": "机器人实验中心有哪些机器人",
+      "keywords": ["机器人实验中心", "E850", "测试机器人", "压力测试机器人", "NFC测试机器人", "音频测试", "监控看板", "整机测试"],
+      "answer": "机器人实验中心大部分机器人都是工程师自主研发的：E850整机测试机器人实现出厂前18项指标自动化检测，压力测试机器人可做模拟交易、触屏压力、APP可靠性等测试，NFC测试机器人按NFC、paypass、payWave标准测试产品与手机的兼容性，还有音频测试系统和远程监控看板（可实时监控漳州万利达的生产状态并自动统计分析）。",
+      "related_page": "/teardown/press-live.html"
+    },
+    {
+      "id": "q_017",
+      "category": "场地与设备",
+      "intent": "lab_mobile_payment_lab",
+      "question": "移动支付实验室是做什么的",
+      "keywords": ["移动支付实验室", "NFC", "音频支付", "声波", "支付兼容", "手机支付兼容"],
+      "answer": "移动支付实验室拥有近千台手机，用来验证我们的产品与手机之间的兼容性，覆盖蓝牙、NFC、音频、声波、APP及其他移动支付应用，确保任何手机到了支付终端前都能顺畅'对上暗号'。",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_018",
+      "category": "技术与成果-出海",
+      "intent": "tech_germany",
+      "question": "德国市场的智能POS项目是什么",
+      "keywords": ["德国", "德国市场", "智能POS", "LANDI Global", "PayTec", "海外项目", "欧洲", "POS平台"],
+      "answer": "实验室研发的新一代智能POS终端技术已应用于联迪国际（LANDI Global）与PayTec面向德国市场的智能POS平台项目。终端搭载Android 14系统并满足PCI PTS 7.x国际金融安全标准，目前已完成首批交易演示验证，平台预留扩展能力，后续可向欧洲其他国家复制推广，这是实验室成果海外落地的重要实践。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_019",
+      "category": "合作与影响",
+      "intent": "lab_cooperation",
+      "question": "实验室和哪些高校机构合作",
+      "keywords": ["产学研", "高校合作", "厦门大学", "泉州师范学院", "闽江大学", "联合实验室", "校企合作", "科研协作"],
+      "answer": "实验室与厦门大学信息科学与技术学院共建联合实验室，并与泉州师范学院、闽江大学等高校开展论文合作、客座人员聘用等产学研协作，同时承接了中国银联商务总公司的支付终端招标检测业务和美团ERP测试业务。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_020",
+      "category": "合作与影响",
+      "intent": "lab_influence",
+      "question": "实验室有哪些行业影响和媒体报道",
+      "keywords": ["行业影响", "媒体报道", "参观", "高通", "银联商务", "电视台", "618", "行业地位", "影响力"],
+      "answer": "实验室在业内影响力较强，高通中国区总裁、银行卡检测中心总经理渠韶光、霍尼韦尔中国区主管以及腾讯、京东、拉卡拉、美团、中国银联商务、华夏银行等企业领导都曾前来参观交流。实验室自研的智能终端测试机器人和扫码测试机器人先后在'618'展出，多次被省市电视台和报纸等主流媒体报道。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_021",
+      "category": "科研学术",
+      "intent": "lab_papers",
+      "question": "实验室发表过哪些论文",
+      "keywords": ["论文", "发表论文", "学术论文", "论文发表", "期刊", "学术成果"],
+      "answer": "实验室共发表学术论文7篇，包括《基于机器人的非接“闪卡”测试技术》《基于机器视觉的人机交互研究》《以两化融合推进智能制造转型》《基于应变测试技术的手机跌落碰撞下BGA芯片失效分析》等，其中《基于机器视觉的人机交互研究》曾在省科协年会现场作报告交流。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_022",
+      "category": "发展规划",
+      "intent": "lab_future",
+      "question": "实验室未来的发展方向是什么",
+      "keywords": ["未来", "发展", "规划", "方向", "整改", "下一步", "目标", "展望"],
+      "answer": "实验室将聚焦“移动支付信息安全技术、人工智能、物联网、大数据在移动支付中的应用”四大方向，持续补齐科研项目、高水平论文、高层次人才、开放课题等短板，深化产学研用合作，力争让更多科研成果走向市场、走出国门。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_023",
+      "category": "参观合作",
+      "intent": "lab_visit",
+      "question": "怎么预约参观实验室",
+      "keywords": ["参观", "预约", "怎么去", "能不能参观", "去你们那", "走访", "拜访", "合作咨询"],
+      "answer": "欢迎您来访交流！参观与业务合作请通过实验室依托单位福建联迪商用设备有限公司联系对接，我们会安排小联和真人讲解员一起接待您，带您看专利墙、可靠性试验室和各型号测试机器人~",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_101",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_ball_impact",
+      "question": "落球冲击试验是做什么的",
+      "keywords": ["落球冲击", "落球试验", "钢球冲击", "球跌冲击", "冲击试验机"],
+      "answer": "落球冲击试验机用规定重量的钢球从设定高度自由落下，冲击样机外壳或屏幕，检验抗冲击强度和结构可靠性。小联可以带您看看它的三维拆解演示~",
+      "related_page": "/teardown/ball-live.html"
+    },
+    {
+      "id": "q_102",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_cable_bend",
+      "question": "线缆弯折试验怎么做的",
+      "keywords": ["线缆弯折", "线材弯折", "弯折试验", "线缆寿命", "摇摆测试"],
+      "answer": "线缆弯折试验机把充电线、数据线夹在摇摆机构上反复弯折，记录断线或接触不良前的次数，用来验证线材和接口的耐久性。",
+      "related_page": "/teardown/cable-live.html"
+    },
+    {
+      "id": "q_103",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_card_life",
+      "question": "刷卡寿命试验机怎么测试",
+      "keywords": ["刷卡寿命", "刷卡试验", "磁条卡", "刷卡速度", "往复刷卡"],
+      "answer": "刷卡寿命试验机模拟人手反复刷卡，可设定刷卡速度、往复行程和刷卡压力，覆盖磁条与芯片双模卡，记录到失效为止的刷卡次数。",
+      "related_page": "/teardown/card-life-live.html"
+    },
+    {
+      "id": "q_104",
+      "category": "场地与设备-失效分析",
+      "intent": "tech_dye_penetrant",
+      "question": "红墨水染色渗透试验是做什么的",
+      "keywords": ["红墨水", "染色渗透", "渗透试验", "染色试验", "微裂纹"],
+      "answer": "红墨水试验把染色液渗入裂纹或缝隙，再在显微镜下观察渗透路径，用来定位焊点、封装或结构件的微裂纹，是失效分析的常用手段。",
+      "related_page": "/teardown/dye-live.html"
+    },
+    {
+      "id": "q_105",
+      "category": "场地与设备-电磁兼容",
+      "intent": "tech_esd",
+      "question": "静电放电抗扰度试验怎么打",
+      "keywords": ["静电放电", "esd", "放电枪", "静电抗扰", "空气放电", "接触放电"],
+      "answer": "静电放电试验用 ESD 放电枪对样机的缝隙、按键和接口做接触放电与空气放电，观察是否死机、重启或数据异常，验证整机抗静电能力。",
+      "related_page": "/teardown/esd-live.html"
+    },
+    {
+      "id": "q_106",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_friction",
+      "question": "摩擦试验机测什么",
+      "keywords": ["摩擦试验", "摩擦机", "耐磨", "往复摩擦", "载荷摩擦"],
+      "answer": "摩擦试验机用规定载荷和行程对产品表面反复摩擦，评估涂层、丝印和外壳的耐磨性与掉漆风险，可设定摩擦次数与速度。",
+      "related_page": "/teardown/friction-live.html"
+    },
+    {
+      "id": "q_107",
+      "category": "场地与设备-气候环境",
+      "intent": "tech_high_low",
+      "question": "高低温试验箱能做什么",
+      "keywords": ["高低温试验", "高低温箱", "高温试验", "低温试验", "温度试验箱"],
+      "answer": "高低温试验箱可在设定的高温、低温及温变速率下考核整机和元器件，检验高低温存储、工作及温度变化后的性能。",
+      "related_page": "/teardown/high-low-live.html"
+    },
+    {
+      "id": "q_108",
+      "category": "场地与设备-气候环境",
+      "intent": "tech_humidity",
+      "question": "恒温恒湿试验箱怎么工作",
+      "keywords": ["恒温恒湿", "湿热试验", "湿度试验", "恒温恒湿箱", "温湿度"],
+      "answer": "恒温恒湿试验箱同时控制温度和湿度，模拟高温高湿、低温低湿等气候条件，验证产品在潮湿环境下的绝缘、腐蚀和功能可靠性。",
+      "related_page": "/teardown/humidity-live.html"
+    },
+    {
+      "id": "q_109",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_ic_card",
+      "question": "IC卡插拔试验机怎么测",
+      "keywords": ["ic卡插拔", "卡插拔", "插拔试验", "金手指", "卡座寿命"],
+      "answer": "IC 卡插拔试验机夹持卡片反复插入卡座，记录插拔行程、速度和次数，重点考核金手指与卡座的接触寿命和读取稳定性。",
+      "related_page": "/teardown/ic-card-live.html"
+    },
+    {
+      "id": "q_110",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_key_life",
+      "question": "按键寿命试验怎么做",
+      "keywords": ["按键寿命", "按键试验", "敲击试验", "按键耐久", "四工位"],
+      "answer": "按键寿命试验机用多个工位同步敲击电源键、功能键，可设定敲击行程和敲击力，统计按键失效前的动作次数。",
+      "related_page": "/teardown/key-life-live.html"
+    },
+    {
+      "id": "q_111",
+      "category": "场地与设备-声学",
+      "intent": "tech_mic",
+      "question": "麦克风声学测试测哪些指标",
+      "keywords": ["麦克风测试", "麦克风声学", "灵敏度", "频响", "声学测试"],
+      "answer": "麦克风声学测试在消声环境中测量灵敏度、频率响应和本底噪声，确认录音、通话和语音唤醒在各类声压下的表现。",
+      "related_page": "/teardown/mic-live.html"
+    },
+    {
+      "id": "q_112",
+      "category": "场地与设备-移动支付",
+      "intent": "tech_protocol_compat",
+      "question": "NFC协议兼容性测试是怎么做的",
+      "keywords": ["协议兼容性", "nfc协议", "非接测试", "读距", "频段"],
+      "answer": "协议兼容性测试让样机与不同频段、不同协议的卡片和读卡器互操作，检查读距、握手流程和交易成功率，覆盖 NFC 非接场景。",
+      "related_page": "/teardown/nfc-film.html"
+    },
+    {
+      "id": "q_113",
+      "category": "场地与设备-移动支付",
+      "intent": "tech_nfc_perf",
+      "question": "NFC非接性能怎么测",
+      "keywords": ["nfc测试", "非接性能", "非接支付", "刷卡距离", "nfc兼容"],
+      "answer": "NFC 非接测试把样机放在标准读卡场中，逐项验证寻卡、协议握手、交易距离以及不同手机和卡片的兼容性，确保非接支付稳定。",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_114",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_package_drop",
+      "question": "包装落下试验怎么做的",
+      "keywords": ["包装落下", "包装跌落", "落下试验", "六面三棱一角", "气动脱钩"],
+      "answer": "包装落下试验机用气动脱钩把整箱产品提升到设定高度后自由落下，按六面、三棱、一角的方式检查包装和内部产品的抗跌落能力。",
+      "related_page": "/teardown/package-drop-live.html"
+    },
+    {
+      "id": "q_115",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_pencil_hardness",
+      "question": "铅笔硬度试验怎么判定",
+      "keywords": ["铅笔硬度", "硬度试验", "铅笔测试", "涂层硬度", "划痕"],
+      "answer": "铅笔硬度试验用不同硬度的铅笔以规定角度和压力划擦表面，找出不产生划痕的最高硬度等级，评估外壳涂层耐磨性。",
+      "related_page": "/teardown/pencil-live.html"
+    },
+    {
+      "id": "q_116",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_press_film",
+      "question": "薄膜按键压力测试是怎么做的",
+      "keywords": ["薄膜按键", "薄膜压力", "压力测试", "按压测试"],
+      "answer": "压力测试头按设定的位移和压力反复按压薄膜按键与触控区域，监测手感、回弹和触点导通情况，筛出早期失效。",
+      "related_page": "/teardown/press-film.html"
+    },
+    {
+      "id": "q_117",
+      "category": "场地与设备-自动化",
+      "intent": "tech_press_robot",
+      "question": "整机压力测试机器人怎么工作",
+      "keywords": ["整机压力", "压力测试机器人", "触屏压力", "app可靠性", "模拟交易"],
+      "answer": "整机压力测试机器人可模拟人手点击、滑动和插卡交易，按脚本反复跑 APP 与支付流程，统计卡顿、死机和交易失败。",
+      "related_page": "/teardown/press-live.html"
+    },
+    {
+      "id": "q_118",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_repeated_drop",
+      "question": "重复跌落试验机怎么测",
+      "keywords": ["重复跌落", "跌落试验", "重复跌落机", "跌落寿命"],
+      "answer": "重复跌落试验机让样机按设定高度和姿态反复跌落，记录外观、功能和结构失效前的跌落次数，考核日常跌落的耐久性。",
+      "related_page": "/teardown/repeated-drop-live.html"
+    },
+    {
+      "id": "q_119",
+      "category": "场地与设备-气候环境",
+      "intent": "tech_salt_spray",
+      "question": "盐雾试验是怎么做的",
+      "keywords": ["盐雾试验", "盐雾箱", "盐水喷雾", "盐雾腐蚀", "中性盐雾"],
+      "answer": "盐雾试验箱把盐水雾化后喷入密闭箱体，按标准控制温度、盐浓度和喷雾量，检查金属件和镀层的腐蚀等级。",
+      "related_page": "/teardown/salt-live.html"
+    },
+    {
+      "id": "q_120",
+      "category": "场地与设备-自动化",
+      "intent": "tech_scan_multi",
+      "question": "扫码机器人怎么做多姿态扫码测试",
+      "keywords": ["扫码机器人测试", "多姿态扫码", "扫码距离", "扫码节拍", "扫码关节"],
+      "answer": "扫码机器人用多轴关节带着扫码模组移动到不同距离和角度，批量验证景深、识别角度、运动容差和连续扫码节拍。",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_121",
+      "category": "场地与设备-声学",
+      "intent": "tech_speaker",
+      "question": "扬声器声学测试怎么测",
+      "keywords": ["扬声器测试", "扬声器声学", "频响", "失真", "声压级"],
+      "answer": "扬声器声学测试在自由场或消声箱内扫频，测量频率响应、声压级和总谐波失真，确认提示音和语音播报的清晰度。",
+      "related_page": "/teardown/speaker-live.html"
+    },
+    {
+      "id": "q_122",
+      "category": "场地与设备-电磁兼容",
+      "intent": "tech_surge",
+      "question": "雷击浪涌试验怎么打",
+      "keywords": ["雷击浪涌", "浪涌试验", "浪涌发生器", "浪涌抗扰", "组合波"],
+      "answer": "雷击浪涌试验用组合波发生器在电源和通信接口上注入规定波形的浪涌电压电流，观察样机是否复位、损坏或通信中断。",
+      "related_page": "/teardown/surge-live.html"
+    },
+    {
+      "id": "q_123",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_tensile",
+      "question": "万能拉伸试验机测什么",
+      "keywords": ["万能拉伸", "拉伸试验", "拉伸机", "最大负荷", "力值精度"],
+      "answer": "万能拉伸试验机对哑铃试样、线材和焊点施加拉力，记录最大负荷和断裂伸长，评估材料与连接结构的强度。",
+      "related_page": "/teardown/tensile-live.html"
+    },
+    {
+      "id": "q_124",
+      "category": "场地与设备-气候环境",
+      "intent": "tech_thermal_cycle",
+      "question": "温度循环试验怎么设置",
+      "keywords": ["温度循环", "温度循环箱", "温变循环", "高低温循环", "温变速率"],
+      "answer": "温度循环试验在高温与低温之间按设定速率反复切换，考核不同材料热胀冷缩造成的焊点疲劳、开裂和功能漂移。",
+      "related_page": "/teardown/thermal-cycle-live.html"
+    },
+    {
+      "id": "q_125",
+      "category": "场地与设备-气候环境",
+      "intent": "tech_thermal_shock",
+      "question": "冷热冲击试验箱怎么工作",
+      "keywords": ["冷热冲击", "冷热冲击箱", "两箱吊篮", "温度冲击", "转换时间"],
+      "answer": "冷热冲击试验箱用两箱吊篮式结构在高温区和低温区之间快速转换，用剧烈温变暴露焊点和封装的热应力缺陷。",
+      "related_page": "/teardown/thermal-shock-live.html"
+    },
+    {
+      "id": "q_126",
+      "category": "场地与设备-机械环境",
+      "intent": "tech_tumble",
+      "question": "回转滚筒跌落试验怎么做的",
+      "keywords": ["回转滚筒", "滚筒跌落", "翻滚跌落", "滚筒试验", "跌落滚筒"],
+      "answer": "回转滚筒试验机让样机在旋转滚筒内不断翻滚跌落，模拟运输和日常使用中的随机碰撞，检查外壳、屏幕和内部结构。",
+      "related_page": "/teardown/tumble-live.html"
+    },
+    {
+      "id": "q_127",
+      "category": "参观合作",
+      "intent": "tech_3d_catalog",
+      "question": "有没有全部试验设备的3D图鉴",
+      "keywords": ["3d图鉴", "全部设备", "设备图鉴", "三维演示", "设备清单"],
+      "answer": "实验室把常用可靠性设备都做成了可拆解的 3D 演示，共 20 多台，点开就能旋转、拆解和查看测试原理。",
+      "related_page": "/teardown/index.html"
+    },
+    {
+      "id": "q_128",
+      "category": "参观合作",
+      "intent": "tech_default_tour",
+      "question": "带我随便逛逛实验室吧",
+      "keywords": ["随便逛逛", "带我逛逛", "随便看看", "参观一下"],
+      "answer": "那我先带您看一台实验室的自动化测试设备，您可以拖动旋转，也可以拆开看看内部结构。",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_900",
+      "category": "兜底",
+      "intent": "fallback",
+      "question": "随便说点别的",
+      "keywords": [],
+      "answer": "这个问题我暂时没准备到资料呢~不过我可以给您讲讲实验室的研究方向、可靠性测试设备，或者德国智能POS项目，您想听哪一个？",
+      "related_page": "/teardown/idle.html"
+    }
+  ]
+}

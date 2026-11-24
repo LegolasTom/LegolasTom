@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "library": "实验项目介绍程序API调用应答库",
+    "library_en": "Lab Project API QA Library",
+    "id_prefix": "pap_",
+    "version": "1.0",
+    "owner": "小联（福建省联迪移动支付研究与应用重点实验室数字人讲解员）",
+    "design_note": "本库为数字人三层应答库之外的实验项目专项库。每条目包含 reply（语音播报原文）与 api_call（驱动实验项目介绍程序屏幕渲染的动作指令，不进语音播报）。问题属于实验项目介绍/查询/筛选/怎么做时路由进本库。"
+  },
+  "api_protocol": {
+    "service_name": "实验项目介绍程序",
+    "service_name_en": "Lab Project Program",
+    "transport": {
+      "type": "REST/JSON over HTTP",
+      "base_url": "http://127.0.0.1:8077",
+      "base_path": "/api/v1",
+      "method": "GET",
+      "headers": {
+        "Content-Type": "application/json",
+        "X-From": "digital-human-xiaolian"
+      }
+    },
+    "endpoints": [
+      {
+        "name": "project_list",
+        "uri": "/api/v1/projects",
+        "method": "GET",
+        "desc": "获取实验项目列表，支持分类/关键词筛选",
+        "query_params": ["category", "q"],
+        "response_example": {"status": "ok", "total": 33, "projects": [{"id": "c01", "name": "高低温试验", "category": "climate", "category_name": "气候环境试验"}]}
+      },
+      {
+        "name": "project_detail",
+        "uri": "/api/v1/projects/{id}",
+        "method": "GET",
+        "desc": "获取单个实验项目详情",
+        "response_example": {"status": "ok", "project": {"id": "c01", "name": "高低温试验", "standards": ["IEC"], "how_to": "..."}}
+      }
+    ],
+    "actions": {
+      "show_projects": {
+        "desc": "展示全部实验项目列表",
+        "target": "GET /api/v1/projects",
+        "payload": {}
+      },
+      "filter_projects": {
+        "desc": "按分类或关键词筛选实验项目列表，将用户的筛选需求交给程序处理",
+        "target": "GET /api/v1/projects?category={category}&q={q}",
+        "payload": {"category": "分类key，可选", "keywords": ["关键词数组，可选"]}
+      },
+      "show_project": {
+        "desc": "展示单个实验项目详情",
+        "target": "GET /api/v1/projects/{id}",
+        "payload": {"id": "项目id，必填"}
+      }
+    },
+    "response": {
+      "ok_list": {"status": "ok", "total": 0, "projects": []},
+      "ok_detail": {"status": "ok", "project": {}},
+      "error": {"status": "error", "error": {"code": "PROJECT_NOT_FOUND", "message": "未找到对应实验项目"}}
+    },
+    "rules": [
+      "api_call 只驱动实验项目介绍程序的屏幕渲染，不进语音播报；语音只播报 reply",
+      "reply 中出现'我来调出/我这就为您调出/我马上为您列出/为您打开'等引导语时，表示本次问答必然伴随一次 api_call",
+      "用户的项目筛选需求（分类/关键词）必须原样通过 api_call.payload 一并发给实验项目介绍程序，由程序处理过滤",
+      "每个 api_call 会生成 request_id 保证幂等；调用超时 5 秒重试一次，仍失败则播报 error_reply 且不渲染",
+      "payload 字段白名单：id、category、keywords；动作白名单：show_projects、filter_projects、show_project",
+      "api 返回 total=0 时，程序渲染'未找到项目'提示，数字人补一句引导话术"
+    ]
+  },
+  "entries": [
+    {
+      "id": "pap_001",
+      "category": "气候环境试验",
+      "intent": "filter_projects_climate",
+      "question": "气候环境测试有哪些",
+      "keywords": ["气候环境", "气候测试", "高低温柔湿热"],
+      "reply": "有的呢~气候环境试验共有高低温、湿热、冷热冲击、温度循环、盐雾五个项目，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "climate"}},
+      "error_reply": "抱歉，气候环境试验项目列表暂时调不出来，您可以先看看我面前的气候环境试验区域展板。"
+    },
+    {
+      "id": "pap_002",
+      "category": "机械环境试验",
+      "intent": "filter_projects_mechanical",
+      "question": "机械环境测试有哪些",
+      "keywords": ["机械环境", "机械测试", "跌落弯折"],
+      "reply": "有的呢~机械环境试验可做滚筒跌落、重复跌落、包装落下、线缆弯折、落球冲击、按键寿命、刷卡寿命、IC卡插拔、铅笔硬度、摩擦、振动、拉伸等测试，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "mechanical"}},
+      "error_reply": "抱歉，机械环境试验项目列表暂时调不出来，您可以先看看机械环境试验区域展板。"
+    },
+    {
+      "id": "pap_003",
+      "category": "电磁兼容试验",
+      "intent": "filter_projects_electrical",
+      "question": "电磁兼容测试有哪些",
+      "keywords": ["电磁兼容", "EMC", "静电浪涌"],
+      "reply": "有的呢~电磁兼容试验包括静电放电、雷击浪涌、电快速瞬变脉冲群、传导骚扰抗扰度四个项目，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "electrical"}},
+      "error_reply": "抱歉，电磁兼容试验项目列表暂时调不出来，您可以先看看EXC试验区域相关展板。"
+    },
+    {
+      "id": "pap_004",
+      "category": "电池试验",
+      "intent": "filter_projects_battery",
+      "question": "电池测试有哪些",
+      "keywords": ["电池测试", "锂电池", "电池实验"],
+      "reply": "有的呢~电池试验主要有锂电池循环寿命试验和锂电池高温安全试验两个项目，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "battery"}},
+      "error_reply": "抱歉，电池试验项目列表暂时调不出来，您可以先看看电池循环寿命测试仪和高温烤箱。"
+    },
+    {
+      "id": "pap_005",
+      "category": "射频与NFC试验",
+      "intent": "filter_projects_rf",
+      "question": "射频或NFC测试有哪些",
+      "keywords": ["射频", "NFC", "OTA", "天线测试", "非接"],
+      "reply": "有的呢~射频与NFC试验包括EMV非接L1与接触L1性能、OTA天线性能、NFC协议兼容性三个项目，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "rf"}},
+      "error_reply": "抱歉，射频与NFC项目列表暂时调不出来，您可以先看看非接测试仪器和OTA暗室。"
+    },
+    {
+      "id": "pap_006",
+      "category": "声学测试",
+      "intent": "filter_projects_acoustic",
+      "question": "声学测试有哪些",
+      "keywords": ["声学", "扬声器", "麦克风", "音频测试"],
+      "reply": "有的呢~声学测试包括扬声器声学测试和麦克风声学测试两个项目，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "acoustic"}},
+      "error_reply": "抱歉，声学测试项目列表暂时调不出来，您可以先看看声学测量系统设备。"
+    },
+    {
+      "id": "pap_007",
+      "category": "自动化测试",
+      "intent": "filter_projects_robot",
+      "question": "自动化测试有哪些",
+      "keywords": ["自动化测试", "机器人测试", "扫码机器人", "压力测试", "整机测试"],
+      "reply": "有的呢~自动化测试包括扫码机器人性能、摄像头成像质量和整机压力测试三个方向，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "robot"}},
+      "error_reply": "抱歉，自动化测试项目列表暂时调不出来，您可以先看看Robot Center和扫码机器人。"
+    },
+    {
+      "id": "pap_008",
+      "category": "失效分析",
+      "intent": "filter_projects_failure",
+      "question": "失效分析测试有哪些",
+      "keywords": ["失效分析", "染色渗透", "红墨水", "失效"],
+      "reply": "有的呢~失效分析有染色渗透分析和红墨水试验两个方法，用于定位失效根因，我马上为您列出~",
+      "api_call": {"action": "filter_projects", "payload": {"category": "failure"}},
+      "error_reply": "抱歉，失效分析项目列表暂时调不出来，您可以先看看失效分析试验室展板。"
+    },
+    {
+      "id": "pap_009",
+      "category": "气候环境试验",
+      "intent": "show_project_c01",
+      "question": "高低温测试怎么做",
+      "keywords": ["高低温怎么做", "高温测试", "低温测试", "温度测试"],
+      "reply": "高低温试验是把样品放进可程式恒温恒湿试验机，按标准设定高低温程序来考核产品。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "c01"}},
+      "error_reply": "高低温试验的介绍暂时调不出来，您可以看看气候环境试验区域的恒温恒湿试验机。"
+    },
+    {
+      "id": "pap_010",
+      "category": "气候环境试验",
+      "intent": "show_project_c02",
+      "question": "湿热测试怎么做",
+      "keywords": ["湿热怎么做", "湿热试验", "恒温恒湿", "湿度测试"],
+      "reply": "湿热试验在恒温恒湿试验机里设定温度与湿度程序进行。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "c02"}},
+      "error_reply": "湿热试验的介绍暂时调不出来，您可以看看恒温恒湿试验机。"
+    },
+    {
+      "id": "pap_011",
+      "category": "气候环境试验",
+      "intent": "show_project_c03",
+      "question": "冷热冲击测试怎么做",
+      "keywords": ["冷热冲击", "温度冲击", "骤冷骤热"],
+      "reply": "冷热冲击试验在冷热冲击试验机里让样品在高温区与低温区快速切换。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "c03"}},
+      "error_reply": "冷热冲击试验的介绍暂时调不出来，您可以看看冷热冲击试验机。"
+    },
+    {
+      "id": "pap_012",
+      "category": "气候环境试验",
+      "intent": "show_project_c04",
+      "question": "温度循环测试怎么做",
+      "keywords": ["温度循环", "循环温度", "升降温"],
+      "reply": "温度循环试验在温度循环试验机里按设定速率反复升降温。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "c04"}},
+      "error_reply": "温度循环试验的介绍暂时调不出来，您可以看看温度循环试验机。"
+    },
+    {
+      "id": "pap_013",
+      "category": "气候环境试验",
+      "intent": "show_project_c05",
+      "question": "盐雾测试怎么做",
+      "keywords": ["盐雾", "盐水喷雾", "腐蚀测试"],
+      "reply": "盐雾试验用盐水喷雾试验机喷盐水来考核产品耐腐蚀能力。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "c05"}},
+      "error_reply": "盐雾试验的介绍暂时调不出来，您可以看看盐水喷雾试验机。"
+    },
+    {
+      "id": "pap_014",
+      "category": "机械环境试验",
+      "intent": "show_project_m01",
+      "question": "跌落测试怎么做",
+      "keywords": ["跌落怎么做", "跌落测试", "滚筒跌落"],
+      "reply": "跌落试验分滚筒跌落、重复跌落和包装落下几种，把产品放到跌落试验机上反复摔打考核。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m01"}},
+      "error_reply": "跌落试验的介绍暂时调不出来，您可以看看机械环境试验区域的跌落试验机。"
+    },
+    {
+      "id": "pap_015",
+      "category": "机械环境试验",
+      "intent": "show_project_m04",
+      "question": "线缆弯折测试怎么做",
+      "keywords": ["线缆弯折", "线材弯折", "弯折测试"],
+      "reply": "线缆弯折试验用线材弯折试验机反复弯折线缆考核寿命。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m04"}},
+      "error_reply": "线缆弯折试验的介绍暂时调不出来，您可以看看线材弯折试验机。"
+    },
+    {
+      "id": "pap_016",
+      "category": "机械环境试验",
+      "intent": "show_project_m06",
+      "question": "按键寿命测试怎么做",
+      "keywords": ["按键寿命", "按键测试", "按键"],
+      "reply": "按键寿命试验用按键寿命试验机反复按压按键考核寿命。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m06"}},
+      "error_reply": "按键寿命试验的介绍暂时调不出来，您可以看看按键寿命试验机。"
+    },
+    {
+      "id": "pap_017",
+      "category": "机械环境试验",
+      "intent": "show_project_m07",
+      "question": "刷卡寿命测试怎么做",
+      "keywords": ["刷卡寿命", "刷卡测试", "磁卡"],
+      "reply": "刷卡寿命试验用刷卡试验机反复刷磁卡考核读卡器寿命。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m07"}},
+      "error_reply": "刷卡寿命试验的介绍暂时调不出来，您可以看看刷卡试验机。"
+    },
+    {
+      "id": "pap_018",
+      "category": "机械环境试验",
+      "intent": "show_project_m08",
+      "question": "IC卡插拔测试怎么做",
+      "keywords": ["IC卡插拔", "插拔测试", "插卡测试"],
+      "reply": "IC卡插拔试验用的是实验室自研的插拔试验机，反复插拔考核卡槽寿命。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m08"}},
+      "error_reply": "IC卡插拔试验的介绍暂时调不出来，您可以看看自研的IC卡插拔试验机。"
+    },
+    {
+      "id": "pap_019",
+      "category": "机械环境试验",
+      "intent": "show_project_m05",
+      "question": "落球冲击测试怎么做",
+      "keywords": ["落球冲击", "钢球冲击", "冲击测试"],
+      "reply": "落球冲击试验让钢球从设定高度落下砸向样品表面考核抗冲击性。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m05"}},
+      "error_reply": "落球冲击试验的介绍暂时调不出来，您可以看看落球冲击试验机。"
+    },
+    {
+      "id": "pap_020",
+      "category": "机械环境试验",
+      "intent": "show_project_m09",
+      "question": "铅笔硬度测试怎么做",
+      "keywords": ["铅笔硬度", "硬度测试", "表面硬度"],
+      "reply": "铅笔硬度试验用标准铅笔在规定载荷下划擦表面评等级。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m09"}},
+      "error_reply": "铅笔硬度试验的介绍暂时调不出来，您可以看看铅笔硬度试验机。"
+    },
+    {
+      "id": "pap_021",
+      "category": "机械环境试验",
+      "intent": "show_project_m11",
+      "question": "振动测试怎么做",
+      "keywords": ["振动测试", "振动怎么做", "正弦振动", "随机振动"],
+      "reply": "振动试验按正弦或随机振动谱在振动台上考核产品结构强度。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "m11"}},
+      "error_reply": "振动试验的介绍暂时调不出来，您可以看看机械环境试验室的振动设备。"
+    },
+    {
+      "id": "pap_022",
+      "category": "电磁兼容试验",
+      "intent": "show_project_e01",
+      "question": "静电放电测试怎么做",
+      "keywords": ["静电放电", "ESD", "静电测试", "静电"],
+      "reply": "静电放电试验在受控湿度环境下用静电枪对样品放电考核抗静电能力。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "e01"}},
+      "error_reply": "静电放电试验的介绍暂时调不出来，您可以看看静电放电试验区域。"
+    },
+    {
+      "id": "pap_023",
+      "category": "电磁兼容试验",
+      "intent": "show_project_e02",
+      "question": "雷击浪涌测试怎么做",
+      "keywords": ["雷击浪涌", "浪涌测试", "雷击", "surge"],
+      "reply": "雷击浪涌试验用浪涌发生器模拟雷击波形对电源注入高能量干扰。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "e02"}},
+      "error_reply": "雷击浪涌试验的介绍暂时调不出来，您可以看看智能型雷击浪涌发生器。"
+    },
+    {
+      "id": "pap_024",
+      "category": "电磁兼容试验",
+      "intent": "show_project_e03",
+      "question": "脉冲群测试怎么做",
+      "keywords": ["脉冲群", "EFT", "瞬变脉冲", "电快速瞬变"],
+      "reply": "电快速瞬变脉冲群试验用EFT测试仪向电源和触摸屏注入快速瞬变干扰。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "e03"}},
+      "error_reply": "脉冲群试验的介绍暂时调不出来，您可以看看瞬变脉冲群测试仪。"
+    },
+    {
+      "id": "pap_025",
+      "category": "电磁兼容试验",
+      "intent": "show_project_e04",
+      "question": "传导骚扰测试怎么做",
+      "keywords": ["传导骚扰", "传导干扰", "抗扰度"],
+      "reply": "传导骚扰抗扰度试验用传导干扰测试仪对电源、触摸屏、信号线注入骚扰信号考核抗干扰能力。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "e04"}},
+      "error_reply": "传导骚扰试验的介绍暂时调不出来，您可以看看传导干扰测试仪。"
+    },
+    {
+      "id": "pap_026",
+      "category": "电池试验",
+      "intent": "show_project_p01",
+      "question": "电池循环寿命测试怎么做",
+      "keywords": ["电池循环", "循环寿命", "锂电池怎么做", "充放电"],
+      "reply": "电池循环寿命试验用循环寿命测试仪对电池反复充放电看容量衰减。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "p01"}},
+      "error_reply": "电池循环寿命试验的介绍暂时调不出来，您可以看看电池循环寿命测试仪。"
+    },
+    {
+      "id": "pap_027",
+      "category": "电池试验",
+      "intent": "show_project_p02",
+      "question": "电池高温安全测试怎么做",
+      "keywords": ["电池高温", "高温安全", "电池烤箱"],
+      "reply": "电池高温安全试验把电池放进高温烤箱做高温存储和高温充放电考核安全性。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "p02"}},
+      "error_reply": "电池高温安全试验的介绍暂时调不出来，您可以看看高温烤箱。"
+    },
+    {
+      "id": "pap_028",
+      "category": "射频与NFC试验",
+      "intent": "show_project_r01",
+      "question": "EMV非接测试怎么做",
+      "keywords": ["EMV", "非接测试", "接触式", "EMVCo", "L1"],
+      "reply": "EMV非接与接触L1测试用非接测试仪器按EMV规范验证支付接口性能。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "r01"}},
+      "error_reply": "EMV测试的介绍暂时调不出来，您可以看看非接测试仪器。"
+    },
+    {
+      "id": "pap_029",
+      "category": "射频与NFC试验",
+      "intent": "show_project_r02",
+      "question": "OTA天线测试怎么做",
+      "keywords": ["OTA", "天线测试", "TRP", "TIS", "暗室"],
+      "reply": "OTA天线测试在暗室里扫描天线方向图测TRP、TIS等指标。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "r02"}},
+      "error_reply": "OTA测试的介绍暂时调不出来，您可以看看OTA暗室。"
+    },
+    {
+      "id": "pap_030",
+      "category": "射频与NFC试验",
+      "intent": "show_project_r03",
+      "question": "NFC兼容测试怎么做",
+      "keywords": ["NFC兼容", "14443", "Mifare", "FeliCa", "NFC测试"],
+      "reply": "NFC协议兼容测试用非接测试仪器验证对ISO 14443、Mifare、FeliCa等协议的兼容性。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "r03"}},
+      "error_reply": "NFC兼容测试的介绍暂时调不出来，您可以看看非接测试仪器。"
+    },
+    {
+      "id": "pap_031",
+      "category": "声学测试",
+      "intent": "show_project_a01",
+      "question": "扬声器测试怎么做",
+      "keywords": ["扬声器", "喇叭", "频响测试"],
+      "reply": "扬声器测试用声学测量系统测频响、失真、杂音和响度。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "a01"}},
+      "error_reply": "扬声器测试的介绍暂时调不出来，您可以看看声学测量系统。"
+    },
+    {
+      "id": "pap_032",
+      "category": "声学测试",
+      "intent": "show_project_a02",
+      "question": "麦克风测试怎么做",
+      "keywords": ["麦克风", "话筒", "拾音", "通话质量"],
+      "reply": "麦克风测试用声学测量系统测频响、失真、杂音和响度，衡量拾音质量。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "a02"}},
+      "error_reply": "麦克风测试的介绍暂时调不出来，您可以看看声学测量系统。"
+    },
+    {
+      "id": "pap_033",
+      "category": "自动化测试",
+      "intent": "show_project_b01",
+      "question": "扫码机器人测试怎么做",
+      "keywords": ["扫码机器人", "扫码性能", "景深", "识别精度"],
+      "reply": "扫码机器人是实验室自研的，自动测景深、识别角度、识别精度和运动容差。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "b01"}},
+      "error_reply": "扫码机器人测试的介绍暂时调不出来，您可以看看扫码机器人展柜。"
+    },
+    {
+      "id": "pap_034",
+      "category": "自动化测试",
+      "intent": "show_project_b02",
+      "question": "摄像头测试怎么做",
+      "keywords": ["摄像头", "成像质量", "照明箱", "白平衡"],
+      "reply": "摄像头成像质量用照明箱测分辨率、色彩还原和白平衡。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "b02"}},
+      "error_reply": "摄像头测试的介绍暂时调不出来，您可以看看摄像头测试用照明箱。"
+    },
+    {
+      "id": "pap_035",
+      "category": "自动化测试",
+      "intent": "show_project_b03",
+      "question": "整机压力测试怎么做",
+      "keywords": ["整机压力", "模拟交易", "触屏压力", "APP可靠性", "整机测试"],
+      "reply": "整机压力测试由Robot Center机器人做模拟交易、触屏压力和APP可靠性测试。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "b03"}},
+      "error_reply": "整机压力测试的介绍暂时调不出来，您可以看看Robot Center。"
+    },
+    {
+      "id": "pap_036",
+      "category": "失效分析",
+      "intent": "show_project_f02",
+      "question": "失效分析怎么做",
+      "keywords": ["失效分析", "红墨水", "染色渗透", "失效怎么做"],
+      "reply": "失效分析用染色渗透或红墨水试验定位失效位置找根因。我来调出具体介绍~",
+      "api_call": {"action": "show_project", "payload": {"id": "f02"}},
+      "error_reply": "失效分析的介绍暂时调不出来，您可以看看失效分析试验室展板。"
+    },
+    {
+      "id": "pap_037",
+      "category": "项目筛选",
+      "intent": "filter_projects_drop",
+      "question": "有没有跌落测试的项目",
+      "keywords": ["能测跌落", "跌落有哪些", "跌落项目", "测跌落"],
+      "reply": "摔打跌落相关的项目还真不少，我马上为您筛出来~",
+      "api_call": {"action": "filter_projects", "payload": {"keywords": ["跌落"]}},
+      "error_reply": "跌落相关项目暂时调不出来，您可以看看机械环境试验区域的跌落试验机。"
+    },
+    {
+      "id": "pap_038",
+      "category": "项目筛选",
+      "intent": "filter_projects_temp",
+      "question": "有没有温度相关的测试",
+      "keywords": ["温度相关的", "温度有哪些", "能测温度", "温度项目"],
+      "reply": "温度相关的项目有高低温、湿热、冷热冲击、温度循环和电池高温安全等，我马上为您筛出来~",
+      "api_call": {"action": "filter_projects", "payload": {"keywords": ["温度"]}},
+      "error_reply": "温度相关项目暂时调不出来，您可以看看气候环境试验区域。"
+    },
+    {
+      "id": "pap_039",
+      "category": "项目筛选",
+      "intent": "filter_projects_keywords",
+      "question": "能测屏幕触摸的项目有哪些",
+      "keywords": ["屏幕", "触摸屏", "触屏", "显示"],
+      "reply": "跟屏幕触摸相关的有传导骚扰、脉冲群测试和整机触屏压力测试等，我马上为您筛出来~",
+      "api_call": {"action": "filter_projects", "payload": {"keywords": ["触屏", "触摸屏"]}},
+      "error_reply": "相关项目暂时调不出来，您可以试试问我具体某个试验怎么做。"
+    },
+    {
+      "id": "pap_040",
+      "category": "全部项目",
+      "intent": "show_projects_all",
+      "question": "实验室有哪些实验项目",
+      "keywords": ["有哪些项目", "全部项目", "所有项目", "实验项目", "都能测什么"],
+      "reply": "实验室有八大类实验项目，从气候、机械、电磁兼容到射频、电池、声学、自动化与失效分析，我马上为您全部列出~",
+      "api_call": {"action": "show_projects", "payload": {}},
+      "error_reply": "实验项目列表暂时调不出来，您可以先沿着参观动线看看各个试验区域。"
+    },
+    {
+      "id": "pap_999",
+      "category": "兜底",
+      "intent": "fallback_project",
+      "question": "实验项目兜底",
+      "keywords": ["实验项目", "能做测试", "测试项目"],
+      "reply": "我可以帮您从实验项目库里找一找，把您关心的问题告诉我，我马上调出来~",
+      "api_call": {"action": "filter_projects", "payload": {"keywords": ["${from_user:项目关键词}"]}},
+      "error_reply": "暂时没在项目库中找到相关实验，您可以描述得更具体一些，比如问'跌落测试怎么做'试试。"
+    }
+  ]
+}

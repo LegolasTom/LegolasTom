@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小联 · 实验室数字人</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">联</div>
+      <div>
+        <h1>小联 <span>Lian</span></h1>
+        <p data-i18n="brandSub">福建省联迪移动支付重点实验室 · 数字人讲解员</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <span class="pill" id="status-pill"><i></i><b id="status-text" data-i18n="statusInit">正在唤醒</b></span>
+      <button class="ghost" id="lang-btn" title="Switch language / 切换语言">EN</button>
+      <button class="ghost" id="voice-btn" title="Toggle voice">语音：开</button>
+      <button class="ghost" id="reset-btn" title="Clear chat">清空</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="preview">
+      <div class="preview-head">
+        <span class="preview-label" data-i18n="previewLabel">相关演示</span>
+        <span class="preview-title" id="preview-title">默认演示 · idle.html</span>
+        <button class="preview-home" id="preview-home" type="button" data-i18n="previewHome">回主页</button>
+      </div>
+      <iframe id="preview-frame" src="/teardown/idle.html" title="相关演示网页"></iframe>
+    </section>
+
+    <div class="side">
+      <section class="stage" id="stage">
+        <div class="stage-host" id="stage-host"></div>
+        <div class="stage-glow"></div>
+        <div class="stage-badge">
+          <span class="dot"></span> Live2D · Persona Engine
+        </div>
+        <div class="nameplate">
+          <strong>小联</strong>
+          <span data-i18n="nameplateRole">AI 讲解员 / 科研小助手</span>
+        </div>
+        <div class="stage-hint" data-i18n="stageHint">点击立绘可互动 · 目光会跟随鼠标</div>
+      </section>
+
+      <section class="chat">
+        <div class="chat-head">
+          <div>
+            <h2 data-i18n="chatTitle">和 小联 聊聊</h2>
+            <p id="kb-info">对话库加载中…</p>
+          </div>
+          <div class="legend">
+            <span class="tag kb" data-i18n="legendKb">对话库</span>
+            <span class="tag guard" data-i18n="legendGuard">边界</span>
+            <span class="tag llm" data-i18n="legendLlm">大模型</span>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="chips" id="chips">
+          <button>你是谁呀</button>
+          <button>实验室的研究方向有哪些</button>
+          <button>有哪些测试设备</button>
+          <button>能借我点钱吗</button>
+          <button>可以加你微信吗</button>
+        </div>
+
+        <form class="composer" id="composer">
+          <button type="button" class="mic-btn" id="voice-input" title="语音输入（Alt+V）" aria-label="语音输入" aria-pressed="false">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+              <path d="M5 11a7 7 0 0 0 14 0"></path>
+              <line x1="12" y1="18" x2="12" y2="21"></line>
+            </svg>
+          </button>
+          <textarea id="input" rows="1" placeholder="问问小联：实验室、检测设备、参观安排…（Enter 发送 / Alt+V 语音）" maxlength="300"></textarea>
+          <button type="submit" id="send-btn" data-i18n="send">发送</button>
+        </form>
+        <div class="foot" data-i18n="foot">
+          命中对话库优先返回标准答案 · 越界问题委婉拒绝 · 其余由大模型生成（3 句以内）· 语音输入 Alt+V
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="/vendor/pixi.min.js"></script>
+<script src="/vendor/live2d.min.js"></script>
+<script src="/vendor/cubism2.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

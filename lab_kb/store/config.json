@@ -1,0 +1,7 @@
+{
+  "model": "BAAI/bge-small-zh-v1.5",
+  "dim": 512,
+  "num_chunks": 73,
+  "normalized": true,
+  "built_at": "2026-11-02"
+}

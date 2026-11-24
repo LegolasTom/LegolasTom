@@ -1,0 +1,2 @@
+[18:32:21] [SMOKE] model=deepseek-v4.1-flash-1017 url=https://tokenhub.landicorp.com/v1/chat/completions
+[18:32:22] [SMOKE] 连通成功, 模型回复: 你好

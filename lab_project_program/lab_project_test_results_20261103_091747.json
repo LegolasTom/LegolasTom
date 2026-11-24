@@ -1,0 +1,3663 @@
+{
+  "summary": {
+    "ts": "20261103_091747",
+    "model": "deepseek-v4.1-flash-1017",
+    "total": 39,
+    "errors": [],
+    "route_hit_local": 39,
+    "reply_exact_local": 39,
+    "api_call_match_local": 38,
+    "api_ok_local": 38,
+    "api_skip": 1,
+    "api_call_skip": 1,
+    "scorable": 39,
+    "route_hit_rate": 1.0,
+    "reply_exact_rate": 1.0,
+    "api_call_match_rate": 1.0,
+    "api_ok_rate": 1.0,
+    "avg_quality_model": 1.1
+  },
+  "cases": [
+    {
+      "id": "T01",
+      "group": "G01_分类筛选",
+      "question": "气候环境测试有哪些",
+      "exp_entry": "pap_001",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "climate"
+        }
+      },
+      "exp_ids": [
+        "c01",
+        "c02",
+        "c03",
+        "c04",
+        "c05"
+      ],
+      "exp_total": 5,
+      "assert_api_call": true,
+      "got_entry": "pap_001",
+      "reply": "有的呢~气候环境试验共有高低温、湿热、冷热冲击、温度循环、盐雾五个项目，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_001\", \"reply\":\"有的呢~气候环境试验共有高低温、湿热、冷热冲击、温度循环、盐雾五个项目，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "climate"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "c01",
+          "c02",
+          "c03",
+          "c04",
+          "c05"
+        ],
+        "total": 5,
+        "detail": {
+          "status": "ok",
+          "total": 5,
+          "projects": [
+            {
+              "id": "c01",
+              "name": "高低温试验",
+              "name_en": "High / Low Temperature Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "高低温",
+                "温度"
+              ]
+            },
+            {
+              "id": "c02",
+              "name": "湿热试验",
+              "name_en": "Damp Heat Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "湿热",
+                "湿度"
+              ]
+            },
+            {
+              "id": "c03",
+              "name": "冷热冲击试验",
+              "name_en": "Thermal Shock Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "冷热冲击",
+                "温度冲击"
+              ]
+            },
+            {
+              "id": "c04",
+              "name": "温度循环试验",
+              "name_en": "Temperature Cycling Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "温度循环"
+              ]
+            },
+            {
+              "id": "c05",
+              "name": "盐雾试验",
+              "name_en": "Salt Mist Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "盐雾",
+                "腐蚀"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "评测输入缺失：未提供实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，故均按未通过/未验证处理（期望为 pap_001 + filter_projects{category:climate}）。"
+      },
+      "score_raw": "{\"entry_match\": 0, \"api_call_match\": 0, \"api_ok\": 0, \"quality\": 1, \"note\": \"评测输入缺失：未提供实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，故均按未通过/未验证处理（期望为 pap_001 + filter_projects{category:climate}）。\"}"
+    },
+    {
+      "id": "T02",
+      "group": "G01_分类筛选",
+      "question": "机械环境测试有哪些",
+      "exp_entry": "pap_002",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "mechanical"
+        }
+      },
+      "exp_ids": [
+        "m01",
+        "m02",
+        "m03",
+        "m04",
+        "m05",
+        "m06",
+        "m07",
+        "m08",
+        "m09",
+        "m10",
+        "m11",
+        "m12"
+      ],
+      "exp_total": 12,
+      "assert_api_call": true,
+      "got_entry": "pap_002",
+      "reply": "有的呢~机械环境试验可做滚筒跌落、重复跌落、包装落下、线缆弯折、落球冲击、按键寿命、刷卡寿命、IC卡插拔、铅笔硬度、摩擦、振动、拉伸等测试，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_002\", \"reply\":\"有的呢~机械环境试验可做滚筒跌落、重复跌落、包装落下、线缆弯折、落球冲击、按键寿命、刷卡寿命、IC卡插拔、铅笔硬度、摩擦、振动、拉伸等测试，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "mechanical"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "m01",
+          "m02",
+          "m03",
+          "m04",
+          "m05",
+          "m06",
+          "m07",
+          "m08",
+          "m09",
+          "m10",
+          "m11",
+          "m12"
+        ],
+        "total": 12,
+        "detail": {
+          "status": "ok",
+          "total": 12,
+          "projects": [
+            {
+              "id": "m01",
+              "name": "滚筒跌落试验",
+              "name_en": "Rotating Barrel Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "滚筒"
+              ]
+            },
+            {
+              "id": "m02",
+              "name": "重复跌落试验",
+              "name_en": "Repeated Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "重复跌落"
+              ]
+            },
+            {
+              "id": "m03",
+              "name": "包装落下试验",
+              "name_en": "Packaging Drop Tester",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "包装"
+              ]
+            },
+            {
+              "id": "m04",
+              "name": "线缆弯折试验",
+              "name_en": "Cable Flexing Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "线缆",
+                "弯折",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m05",
+              "name": "落球冲击试验",
+              "name_en": "Steel Ball Impact Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "落球冲击",
+                "冲击"
+              ]
+            },
+            {
+              "id": "m06",
+              "name": "按键寿命试验",
+              "name_en": "Key Pressing Life Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "按键",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m07",
+              "name": "刷卡寿命试验",
+              "name_en": "Magnetic Card Swiping Life Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "刷卡",
+                "磁卡",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m08",
+              "name": "IC卡插拔试验",
+              "name_en": "Smart Card Insertion/Extraction Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "IC卡",
+                "插拔",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m09",
+              "name": "铅笔硬度试验",
+              "name_en": "Pencil Hardness Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "硬度",
+                "表面"
+              ]
+            },
+            {
+              "id": "m10",
+              "name": "摩擦试验",
+              "name_en": "Abrasion Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "摩擦",
+                "耐磨"
+              ]
+            },
+            {
+              "id": "m11",
+              "name": "振动试验",
+              "name_en": "Vibration Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "振动"
+              ]
+            },
+            {
+              "id": "m12",
+              "name": "万能拉伸试验",
+              "name_en": "Universal Tensile Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "拉伸",
+                "力学"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply、api_call一致性判定及API执行结果，无法评估。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply、api_call一致性判定及API执行结果，无法评估。\"}"
+    },
+    {
+      "id": "T03",
+      "group": "G01_分类筛选",
+      "question": "电磁兼容测试有哪些",
+      "exp_entry": "pap_003",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "electrical"
+        }
+      },
+      "exp_ids": [
+        "e01",
+        "e02",
+        "e03",
+        "e04"
+      ],
+      "exp_total": 4,
+      "assert_api_call": true,
+      "got_entry": "pap_003",
+      "reply": "有的呢~电磁兼容试验包括静电放电、雷击浪涌、电快速瞬变脉冲群、传导骚扰抗扰度四个项目，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_003\", \"reply\":\"有的呢~电磁兼容试验包括静电放电、雷击浪涌、电快速瞬变脉冲群、传导骚扰抗扰度四个项目，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "electrical"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "e01",
+          "e02",
+          "e03",
+          "e04"
+        ],
+        "total": 4,
+        "detail": {
+          "status": "ok",
+          "total": 4,
+          "projects": [
+            {
+              "id": "e01",
+              "name": "静电放电抗扰度试验",
+              "name_en": "ESD Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "静电",
+                "ESD"
+              ]
+            },
+            {
+              "id": "e02",
+              "name": "雷击浪涌试验",
+              "name_en": "Lightning Surge Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "浪涌",
+                "雷击"
+              ]
+            },
+            {
+              "id": "e03",
+              "name": "电快速瞬变脉冲群试验",
+              "name_en": "EFT Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "脉冲群",
+                "EFT"
+              ]
+            },
+            {
+              "id": "e04",
+              "name": "传导骚扰抗扰度试验",
+              "name_en": "Conducted Disturbance Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "传导",
+                "抗扰度"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、实际reply及API执行结果，无法按规则完成评估"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、实际reply及API执行结果，无法按规则完成评估\"}"
+    },
+    {
+      "id": "T04",
+      "group": "G01_分类筛选",
+      "question": "电池测试有哪些",
+      "exp_entry": "pap_004",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "battery"
+        }
+      },
+      "exp_ids": [
+        "p01",
+        "p02"
+      ],
+      "exp_total": 2,
+      "assert_api_call": true,
+      "got_entry": "pap_004",
+      "reply": "有的呢~电池试验主要有锂电池循环寿命试验和锂电池高温安全试验两个项目，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_004\", \"reply\":\"有的呢~电池试验主要有锂电池循环寿命试验和锂电池高温安全试验两个项目，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "battery"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "p01",
+          "p02"
+        ],
+        "total": 2,
+        "detail": {
+          "status": "ok",
+          "total": 2,
+          "projects": [
+            {
+              "id": "p01",
+              "name": "锂电池循环寿命试验",
+              "name_en": "Battery Cycle Life Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "循环",
+                "寿命"
+              ]
+            },
+            {
+              "id": "p02",
+              "name": "锂电池高温安全试验",
+              "name_en": "Battery High Temperature Safety Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "高温",
+                "安全"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "输入不完整：仅给出期望条目 pap_004 与期望 api_call（filter_projects/category=battery），缺少实际路由条目、实际 reply 及 API 执行结果，无法核验匹配与回复质量，请补充后再评。"
+      },
+      "score_raw": "{\"entry_match\": 0, \"api_call_match\": 0, \"api_ok\": 0, \"quality\": 1, \"note\": \"输入不完整：仅给出期望条目 pap_004 与期望 api_call（filter_projects/category=battery），缺少实际路由条目、实际 reply 及 API 执行结果，无法核验匹配与回复质量，请补充后再评。\"}"
+    },
+    {
+      "id": "T05",
+      "group": "G01_分类筛选",
+      "question": "射频和NFC测试有哪些",
+      "exp_entry": "pap_005",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "rf"
+        }
+      },
+      "exp_ids": [
+        "r01",
+        "r02",
+        "r03"
+      ],
+      "exp_total": 3,
+      "assert_api_call": true,
+      "got_entry": "pap_005",
+      "reply": "有的呢~射频与NFC试验包括EMV非接L1与接触L1性能、OTA天线性能、NFC协议兼容性三个项目，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\",\"id\":\"pap_005\",\"reply\":\"有的呢~射频与NFC试验包括EMV非接L1与接触L1性能、OTA天线性能、NFC协议兼容性三个项目，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "rf"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "r01",
+          "r02",
+          "r03"
+        ],
+        "total": 3,
+        "detail": {
+          "status": "ok",
+          "total": 3,
+          "projects": [
+            {
+              "id": "r01",
+              "name": "EMV非接L1与接触L1性能测试",
+              "name_en": "EMVCo Contactless L1 & Contact L1 Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "NFC",
+                "EMV",
+                "支付"
+              ]
+            },
+            {
+              "id": "r02",
+              "name": "OTA天线性能测试",
+              "name_en": "OTA Antenna Performance Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "射频",
+                "OTA",
+                "天线"
+              ]
+            },
+            {
+              "id": "r03",
+              "name": "NFC协议兼容性测试",
+              "name_en": "NFC Protocol Compatibility Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "NFC",
+                "协议",
+                "兼容"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply 及 API 执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply 及 API 执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T06",
+      "group": "G01_分类筛选",
+      "question": "声学测试有哪些",
+      "exp_entry": "pap_006",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "acoustic"
+        }
+      },
+      "exp_ids": [
+        "a01",
+        "a02"
+      ],
+      "exp_total": 2,
+      "assert_api_call": true,
+      "got_entry": "pap_006",
+      "reply": "有的呢~声学测试包括扬声器声学测试和麦克风声学测试两个项目，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_006\", \"reply\":\"有的呢~声学测试包括扬声器声学测试和麦克风声学测试两个项目，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "acoustic"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "a01",
+          "a02"
+        ],
+        "total": 2,
+        "detail": {
+          "status": "ok",
+          "total": 2,
+          "projects": [
+            {
+              "id": "a01",
+              "name": "扬声器声学测试",
+              "name_en": "Speaker Acoustic Test",
+              "category": "acoustic",
+              "category_name": "声学测试",
+              "tags": [
+                "声学",
+                "扬声器",
+                "音频"
+              ]
+            },
+            {
+              "id": "a02",
+              "name": "麦克风声学测试",
+              "name_en": "Microphone Acoustic Test",
+              "category": "acoustic",
+              "category_name": "声学测试",
+              "tags": [
+                "声学",
+                "麦克风",
+                "音频"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法判定"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法判定\"}"
+    },
+    {
+      "id": "T07",
+      "group": "G01_分类筛选",
+      "question": "自动化测试有哪些",
+      "exp_entry": "pap_007",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "robot"
+        }
+      },
+      "exp_ids": [
+        "b01",
+        "b02",
+        "b03"
+      ],
+      "exp_total": 3,
+      "assert_api_call": true,
+      "got_entry": "pap_007",
+      "reply": "有的呢~自动化测试包括扫码机器人性能、摄像头成像质量和整机压力测试三个方向，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_007\", \"reply\":\"有的呢~自动化测试包括扫码机器人性能、摄像头成像质量和整机压力测试三个方向，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "robot"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "b01",
+          "b02",
+          "b03"
+        ],
+        "total": 3,
+        "detail": {
+          "status": "ok",
+          "total": 3,
+          "projects": [
+            {
+              "id": "b01",
+              "name": "扫码机器人测试",
+              "name_en": "Barcode Scan Robot Test",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "机器人",
+                "扫码",
+                "自动化"
+              ]
+            },
+            {
+              "id": "b02",
+              "name": "摄像头成像质量测试",
+              "name_en": "Camera Imaging Quality Test",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "摄像头",
+                "成像",
+                "自动化"
+              ]
+            },
+            {
+              "id": "b03",
+              "name": "整机压力测试",
+              "name_en": "Whole-device Stress Test (Robot Center)",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "机器人",
+                "整机",
+                "压力测试"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、实际reply及API执行结果，无法判定"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、实际reply及API执行结果，无法判定\"}"
+    },
+    {
+      "id": "T08",
+      "group": "G01_分类筛选",
+      "question": "失效分析有哪些测试方法",
+      "exp_entry": "pap_008",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "failure"
+        }
+      },
+      "exp_ids": [
+        "f01",
+        "f02"
+      ],
+      "exp_total": 2,
+      "assert_api_call": true,
+      "got_entry": "pap_008",
+      "reply": "有的呢~失效分析有染色渗透分析和红墨水试验两个方法，用于定位失效根因，我马上为您列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_008\", \"reply\":\"有的呢~失效分析有染色渗透分析和红墨水试验两个方法，用于定位失效根因，我马上为您列出~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "category": "failure"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "f01",
+          "f02"
+        ],
+        "total": 2,
+        "detail": {
+          "status": "ok",
+          "total": 2,
+          "projects": [
+            {
+              "id": "f01",
+              "name": "染色渗透分析（失效分析）",
+              "name_en": "Dye & Pry Failure Analysis",
+              "category": "failure",
+              "category_name": "失效分析",
+              "tags": [
+                "失效分析",
+                "染色渗透",
+                "可靠性"
+              ]
+            },
+            {
+              "id": "f02",
+              "name": "红墨水试验（失效分析）",
+              "name_en": "Red Ink Test (Failure Analysis)",
+              "category": "failure",
+              "category_name": "失效分析",
+              "tags": [
+                "失效分析",
+                "红墨水",
+                "可靠性"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、实际reply、api_call一致性判定及API真实执行结果，无法完成有效评估。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、实际reply、api_call一致性判定及API真实执行结果，无法完成有效评估。\"}"
+    },
+    {
+      "id": "T09",
+      "group": "G02_怎么做",
+      "question": "高低温测试怎么做",
+      "exp_entry": "pap_009",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c01"
+        }
+      },
+      "exp_ids": [
+        "c01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_009",
+      "reply": "高低温试验是把样品放进可程式恒温恒湿试验机，按标准设定高低温程序来考核产品。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_009\", \"reply\":\"高低温试验是把样品放进可程式恒温恒湿试验机，按标准设定高低温程序来考核产品。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "c01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "c01",
+            "name": "高低温试验",
+            "name_en": "High / Low Temperature Test",
+            "category": "climate",
+            "category_name": "气候环境试验",
+            "tags": [
+              "气候",
+              "高低温",
+              "温度"
+            ],
+            "devices": [
+              "可程式恒温恒湿试验机 Temp & Humi Programmable Chamber"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "按 IEC、MIL、ISO、GB、GJB 等各种标准或客户要求，模拟高低温环境条件开展试验，评估产品在极端温度环境下的工作状态与可靠性。",
+            "case_intro": "可模拟各种高低温气候环境条件，按相应标准或客户要求开展相应的高低温试验。",
+            "how_to": "将待测样品放入可程式恒温恒湿试验机，设定高低温程序（如高温点、低温点、保持时间、循环次数），按 IEC / MIL / ISO / GB / GJB 等标准或客户要求执行试验，评估产品在极端温度下的工作状态与可靠性。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目id、实际reply、api_call一致性判定与API执行结果，无法核验；仅凭期望条目pap_009与show_project(c01)无法给出匹配结论，需补充实际数据后重评。"
+      },
+      "score_raw": "{\"entry_match\": 0, \"api_call_match\": 0, \"api_ok\": 0, \"quality\": 1, \"note\": \"未提供实际路由条目id、实际reply、api_call一致性判定与API执行结果，无法核验；仅凭期望条目pap_009与show_project(c01)无法给出匹配结论，需补充实际数据后重评。\"}"
+    },
+    {
+      "id": "T10",
+      "group": "G02_怎么做",
+      "question": "湿热测试怎么做",
+      "exp_entry": "pap_010",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c02"
+        }
+      },
+      "exp_ids": [
+        "c02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_010",
+      "reply": "湿热试验在恒温恒湿试验机里设定温度与湿度程序进行。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_010\", \"reply\":\"湿热试验在恒温恒湿试验机里设定温度与湿度程序进行。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "c02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "c02",
+            "name": "湿热试验",
+            "name_en": "Damp Heat Test",
+            "category": "climate",
+            "category_name": "气候环境试验",
+            "tags": [
+              "气候",
+              "湿热",
+              "湿度"
+            ],
+            "devices": [
+              "可程式恒温恒湿试验机 Temp & Humi Programmable Chamber"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "模拟湿热环境条件，检查产品在高温高湿环境下电气性能、外壳防护及材料老化等表现。",
+            "case_intro": "通过恒温恒湿试验机设定温度与相对湿度程序，评估产品在湿热环境下的性能与可靠性。",
+            "how_to": "将样品放入可程式恒温恒湿试验机，设定温度与相对湿度（如 60℃/93%RH 等），按标准或客户要求保持一定时长后检查产品电气性能、外观与防护能力。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法判定。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法判定。\"}"
+    },
+    {
+      "id": "T11",
+      "group": "G02_怎么做",
+      "question": "冷热冲击测试怎么做",
+      "exp_entry": "pap_011",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c03"
+        }
+      },
+      "exp_ids": [
+        "c03"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_011",
+      "reply": "冷热冲击试验在冷热冲击试验机里让样品在高温区与低温区快速切换。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_011\", \"reply\":\"冷热冲击试验在冷热冲击试验机里让样品在高温区与低温区快速切换。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c03"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "c03"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "c03",
+            "name": "冷热冲击试验",
+            "name_en": "Thermal Shock Test",
+            "category": "climate",
+            "category_name": "气候环境试验",
+            "tags": [
+              "气候",
+              "冷热冲击",
+              "温度冲击"
+            ],
+            "devices": [
+              "冷热冲击试验机 Thermal Shock Chamber"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "通过高温区与低温区快速切换，使样品在极短时间内承受剧烈温差变化，评估产品耐热冲击能力、材料结构应力与焊点可靠性。",
+            "case_intro": "用于评估产品在骤冷骤热条件下的结构稳定性与可靠性。",
+            "how_to": "将样品置于冷热冲击试验机，在高温区与低温区之间快速往复转移，每个区间保持设定时间并循环若干次数，考核产品耐温度冲击能力。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T12",
+      "group": "G02_怎么做",
+      "question": "温度循环测试怎么做",
+      "exp_entry": "pap_012",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c04"
+        }
+      },
+      "exp_ids": [
+        "c04"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_012",
+      "reply": "温度循环试验在温度循环试验机里按设定速率反复升降温。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_012\", \"reply\":\"温度循环试验在温度循环试验机里按设定速率反复升降温。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c04"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "c04"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "c04",
+            "name": "温度循环试验",
+            "name_en": "Temperature Cycling Test",
+            "category": "climate",
+            "category_name": "气候环境试验",
+            "tags": [
+              "气候",
+              "温度循环"
+            ],
+            "devices": [
+              "温度循环试验机 Temperature Cycling Chamber"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "按设定升降温速率在上下限温度间循环，考核产品在反复温度变化下的电气性能、连接可靠性及材料疲劳特性。",
+            "case_intro": "温度循环试验机可开展温度循环试验，覆盖 IEC、MIL、ISO、GB、GJB 等标准或客户要求。",
+            "how_to": "在温度循环试验机中设定上限/下限温度、升降温速率与循环次数，样品随程序实时循环，试验后检查功能与外观并记录数据。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，请补齐后再评估（期望条目pap_012/show_project c04）。"
+      },
+      "score_raw": "{\"entry_match\": 0, \"api_call_match\": 0, \"api_ok\": 0, \"quality\": 1, \"note\": \"缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，请补齐后再评估（期望条目pap_012/show_project c04）。\"}"
+    },
+    {
+      "id": "T13",
+      "group": "G02_怎么做",
+      "question": "盐雾测试怎么做",
+      "exp_entry": "pap_013",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c05"
+        }
+      },
+      "exp_ids": [
+        "c05"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_013",
+      "reply": "盐雾试验用盐水喷雾试验机喷盐水来考核产品耐腐蚀能力。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_013\", \"reply\":\"盐雾试验用盐水喷雾试验机喷盐水来考核产品耐腐蚀能力。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "c05"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "c05"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "c05",
+            "name": "盐雾试验",
+            "name_en": "Salt Mist Test",
+            "category": "climate",
+            "category_name": "气候环境试验",
+            "tags": [
+              "气候",
+              "盐雾",
+              "腐蚀"
+            ],
+            "devices": [
+              "盐水喷雾试验机 Salt Mist Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "通过盐水喷雾模拟海洋/腐蚀性大气环境，评估产品金属部件、涂层及表面的耐腐蚀能力。",
+            "case_intro": "用于评估产品在盐雾腐蚀环境下的防护能力与材料耐蚀性。",
+            "how_to": "将样品置于盐水喷雾试验机内按设定浓度与时间喷雾，试验结束后取出清洗观察腐蚀情况，依据标准判定腐蚀等级。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T14",
+      "group": "G02_怎么做",
+      "question": "跌落测试怎么做",
+      "exp_entry": "pap_014",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m01"
+        }
+      },
+      "exp_ids": [
+        "m01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_014",
+      "reply": "跌落试验分滚筒跌落、重复跌落和包装落下几种，把产品放到跌落试验机上反复摔打考核。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_014\", \"reply\":\"跌落试验分滚筒跌落、重复跌落和包装落下几种，把产品放到跌落试验机上反复摔打考核。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m01",
+            "name": "滚筒跌落试验",
+            "name_en": "Rotating Barrel Drop Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "跌落",
+              "滚筒"
+            ],
+            "devices": [
+              "滚筒跌落试验机 / 回转滚筒试验机 Rotating Barrel / Rotary Cylinder Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "产品放入旋转滚筒内随筒体翻转反复跌落碰撞，模拟运输与使用中的随机跌落场景，评估壳体、结构及内部器件的抗跌落能力。",
+            "case_intro": "机械环境试验区域提供滚筒跌落、随机跌落等试验服务，覆盖各类标准或客户要求。",
+            "how_to": "将样品放入滚筒跌落试验机，按标准设定跌落次数与转速，滚筒旋转使样品反复跌落与碰撞，试验后检查外观、结构与功能。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法判定匹配性与质量"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法判定匹配性与质量\"}"
+    },
+    {
+      "id": "T15",
+      "group": "G02_怎么做",
+      "question": "线缆弯折测试怎么做",
+      "exp_entry": "pap_015",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m04"
+        }
+      },
+      "exp_ids": [
+        "m04"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_015",
+      "reply": "线缆弯折试验用线材弯折试验机反复弯折线缆考核寿命。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_015\", \"reply\":\"线缆弯折试验用线材弯折试验机反复弯折线缆考核寿命。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m04"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m04"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m04",
+            "name": "线缆弯折试验",
+            "name_en": "Cable Flexing Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "线缆",
+              "弯折",
+              "寿命"
+            ],
+            "devices": [
+              "线材弯折试验机 Cable Flexing Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "对线缆、排线、端子连接处进行反复弯折摇摆，评估线材耐弯折疲劳性能与焊接/端子连接可靠性。",
+            "case_intro": "机械环境试验区域可开展线缆弯折摇摆等试验，满足 POS 产品的测试需求。",
+            "how_to": "将线缆固定于线材弯折试验机，设定弯折角度、速度与次数往复弯折，检查线缆导通性、外皮破损与连接可靠性。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法评估该用例。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法评估该用例。\"}"
+    },
+    {
+      "id": "T16",
+      "group": "G02_怎么做",
+      "question": "按键寿命测试怎么做",
+      "exp_entry": "pap_016",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m06"
+        }
+      },
+      "exp_ids": [
+        "m06"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_016",
+      "reply": "按键寿命试验用按键寿命试验机反复按压按键考核寿命。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_016\", \"reply\":\"按键寿命试验用按键寿命试验机反复按压按键考核寿命。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m06"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m06"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m06",
+            "name": "按键寿命试验",
+            "name_en": "Key Pressing Life Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "按键",
+              "寿命"
+            ],
+            "devices": [
+              "按键寿命试验机 Key Pressing Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "以设定按压力、频率与次数对按键进行反复按压，考核键盘/按键的机械寿命与手感稳定性。",
+            "case_intro": "机构寿命试验区域可开展按键寿命试验，满足 POS 产品的测试需求。",
+            "how_to": "将样品固定后将按键寿命试验机压锤对准按键，设定压力、速度与总次数，试验后检查按键功能、回弹与外观磨损。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply、api_call一致性及API执行结果，无法按规则评估"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply、api_call一致性及API执行结果，无法按规则评估\"}"
+    },
+    {
+      "id": "T17",
+      "group": "G02_怎么做",
+      "question": "刷卡寿命测试怎么做",
+      "exp_entry": "pap_017",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m07"
+        }
+      },
+      "exp_ids": [
+        "m07"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_017",
+      "reply": "刷卡寿命试验用刷卡试验机反复刷磁卡考核读卡器寿命。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_017\", \"reply\":\"刷卡寿命试验用刷卡试验机反复刷磁卡考核读卡器寿命。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m07"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m07"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m07",
+            "name": "刷卡寿命试验",
+            "name_en": "Magnetic Card Swiping Life Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "刷卡",
+              "磁卡",
+              "寿命"
+            ],
+            "devices": [
+              "刷卡试验机 Magnetic Card Swiping Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "使用磁卡对刷卡槽进行反复滑刷，考核读卡器的机械寿命、磁头磨损与刷卡识别稳定性。",
+            "case_intro": "机构寿命试验区域可开展刷卡寿命试验，满足 POS 产品的测试需求。",
+            "how_to": "将磁条卡置于刷卡试验机中按设定次数与力度反复滑刷，定期验证读卡成功率，检查磁头与刷卡的机械寿命。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、实际reply及API执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、实际reply及API执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T18",
+      "group": "G02_怎么做",
+      "question": "IC卡插拔测试怎么做",
+      "exp_entry": "pap_018",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m08"
+        }
+      },
+      "exp_ids": [
+        "m08"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_018",
+      "reply": "IC卡插拔试验用的是实验室自研的插拔试验机，反复插拔考核卡槽寿命。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_018\", \"reply\":\"IC卡插拔试验用的是实验室自研的插拔试验机，反复插拔考核卡槽寿命。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m08"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m08"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m08",
+            "name": "IC卡插拔试验",
+            "name_en": "Smart Card Insertion/Extraction Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "IC卡",
+              "插拔",
+              "寿命"
+            ],
+            "devices": [
+              "IC卡插拔试验机（实验室自行设计 Smart Card Reading Tester, self-designed）"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "对 IC 卡槽进行反复插拔，考核读卡器卡槽的机械寿命、接触可靠性与插拔卡识别成功率。",
+            "case_intro": "实验室自行设计了 IC 卡插拔试验机等测试设备，满足 POS 产品的测试需求。",
+            "how_to": "将 IC 卡装入自研插拔试验机，按设定次数自动插拔，定期验证卡片识别与读写成功率，检查卡槽磨损与接触状态。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法核验一致性与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法核验一致性与质量。\"}"
+    },
+    {
+      "id": "T19",
+      "group": "G02_怎么做",
+      "question": "落球冲击测试怎么做",
+      "exp_entry": "pap_019",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m05"
+        }
+      },
+      "exp_ids": [
+        "m05"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_019",
+      "reply": "落球冲击试验让钢球从设定高度落下砸向样品表面考核抗冲击性。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_019\", \"reply\":\"落球冲击试验让钢球从设定高度落下砸向样品表面考核抗冲击性。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "m05"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "m05"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "m05",
+            "name": "落球冲击试验",
+            "name_en": "Steel Ball Impact Test",
+            "category": "mechanical",
+            "category_name": "机械环境试验",
+            "tags": [
+              "机械",
+              "落球冲击",
+              "冲击"
+            ],
+            "devices": [
+              "落球冲击试验机 Steel Ball Impact Tester"
+            ],
+            "standards": [
+              "IEC",
+              "MIL",
+              "ISO",
+              "GB",
+              "GJB"
+            ],
+            "main_function": "钢球自设定高度自由落下冲击样品表面，评估屏幕、壳体等部位的抗冲击性能。",
+            "case_intro": "机构寿命试验区域可开展落球冲击试验，满足 POS 产品测试需求。",
+            "how_to": "按标准选择钢球重量与落下高度，释放钢球冲击样品关键部位（如屏幕），检查有无破裂、裂纹或功能异常。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "输入中缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法判定是否命中 pap_019 或调用是否成功，请补充后重评。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"输入中缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法判定是否命中 pap_019 或调用是否成功，请补充后重评。\"}"
+    },
+    {
+      "id": "T20",
+      "group": "G02_怎么做",
+      "question": "静电放电测试怎么做",
+      "exp_entry": "pap_022",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e01"
+        }
+      },
+      "exp_ids": [
+        "e01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_022",
+      "reply": "静电放电试验在受控湿度环境下用静电枪对样品放电考核抗静电能力。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_022\", \"reply\":\"静电放电试验在受控湿度环境下用静电枪对样品放电考核抗静电能力。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "e01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "e01",
+            "name": "静电放电抗扰度试验",
+            "name_en": "ESD Immunity Test",
+            "category": "electrical",
+            "category_name": "电磁兼容试验",
+            "tags": [
+              "EMC",
+              "静电",
+              "ESD"
+            ],
+            "devices": [
+              "静电放电试验系统 Electrostatic Discharge Tester"
+            ],
+            "standards": [
+              "IEC",
+              "GB"
+            ],
+            "main_function": "在相对湿度可控的环境下开展静电抗扰度试验，按空气放电与接触放电方式对样品施加静电，评估产品耐受静电放电的能力。",
+            "case_intro": "静电放电试验区域可在受控相对湿度环境下开展静电抗扰度试验，评估产品对静电放电的抗扰能力。",
+            "how_to": "在相对湿度可控的环境中调节静电枪电压（接触/空气放电）对样品指定点施加放电，观察产品是否出现复位、重启或功能异常。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法评估"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法评估\"}"
+    },
+    {
+      "id": "T21",
+      "group": "G02_怎么做",
+      "question": "雷击浪涌测试怎么做",
+      "exp_entry": "pap_023",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e02"
+        }
+      },
+      "exp_ids": [
+        "e02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_023",
+      "reply": "雷击浪涌试验用浪涌发生器模拟雷击波形对电源注入高能量干扰。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_023\", \"reply\":\"雷击浪涌试验用浪涌发生器模拟雷击波形对电源注入高能量干扰。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "e02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "e02",
+            "name": "雷击浪涌试验",
+            "name_en": "Lightning Surge Test",
+            "category": "electrical",
+            "category_name": "电磁兼容试验",
+            "tags": [
+              "EMC",
+              "浪涌",
+              "雷击"
+            ],
+            "devices": [
+              "智能型雷击浪涌发生器 Lightning Surge Generator（开路电压波 1.2/50us，短路电流波 8/20us，电压峰值 0~6kV，极性正/负/交替）"
+            ],
+            "standards": [
+              "GB/T 17626.5-2008（等同 IEC 61000-4-5）"
+            ],
+            "main_function": "模拟开关切换及自然界雷击引起的高能量瞬变干扰，对设备电源和内部器件抗雷击和浪涌干扰能力进行评估，保证 POS 机和电源适配器在雷击浪涌下正常工作。",
+            "case_intro": "可模拟雷击浪涌波形，验证电源的抗雷击浪涌能力；在电源导入前期评估打雷的影响，可规避大部分因雷击导致的不良。",
+            "how_to": "将浪涌发生器输出耦合至电源端按设定电压等级（最高 6kV）与极性注入浪涌波形，每个等级多次施加，检查产品是否复位、损坏或功能降级。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，请补充后重判（期望为 pap_023 / show_project id=e02）"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目id、实际reply、api_call一致性判定及API真实执行结果，无法核验，请补充后重判（期望为 pap_023 / show_project id=e02）\"}"
+    },
+    {
+      "id": "T22",
+      "group": "G02_怎么做",
+      "question": "脉冲群测试怎么做",
+      "exp_entry": "pap_024",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e03"
+        }
+      },
+      "exp_ids": [
+        "e03"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_024",
+      "reply": "电快速瞬变脉冲群试验用EFT测试仪向电源和触摸屏注入快速瞬变干扰。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\",\"id\":\"pap_024\",\"reply\":\"电快速瞬变脉冲群试验用EFT测试仪向电源和触摸屏注入快速瞬变干扰。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e03"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "e03"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "e03",
+            "name": "电快速瞬变脉冲群试验",
+            "name_en": "EFT Immunity Test",
+            "category": "electrical",
+            "category_name": "电磁兼容试验",
+            "tags": [
+              "EMC",
+              "脉冲群",
+              "EFT"
+            ],
+            "devices": [
+              "瞬变脉冲群测试仪 EFT Immunity Tester（输出电压 0.2~5kV，测试时间 1~1000s，脉冲频率 1~1MHz，极性正/负/交替）"
+            ],
+            "standards": [
+              "IEC/EN 61000-4-4 & GB/T 17626.4"
+            ],
+            "main_function": "测试电源、触摸屏对电快速瞬变脉冲群信号的抗干扰能力，评估产品在继电器开关、电机启停等产生的快速瞬变干扰下是否正常工作。",
+            "case_intro": "触摸屏受干扰后出现跳点、无响应等问题是电子设备常见问题之一，该设备能在选型初期就确保触摸屏在特定环境中正常使用。",
+            "how_to": "将 EFT 试验仪按标准耦合到电源或信号线，设定电压（最高 5kV）、频率与时长注入干扰脉冲群，观察触摸屏与电源是否出现跳点、无响应等异常。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法核验是否命中pap_024及show_project(e03)，按缺省判为不匹配。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法核验是否命中pap_024及show_project(e03)，按缺省判为不匹配。\"}"
+    },
+    {
+      "id": "T23",
+      "group": "G02_怎么做",
+      "question": "传导骚扰测试怎么做",
+      "exp_entry": "pap_025",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e04"
+        }
+      },
+      "exp_ids": [
+        "e04"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_025",
+      "reply": "传导骚扰抗扰度试验用传导干扰测试仪对电源、触摸屏、信号线注入骚扰信号考核抗干扰能力。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_025\", \"reply\":\"传导骚扰抗扰度试验用传导干扰测试仪对电源、触摸屏、信号线注入骚扰信号考核抗干扰能力。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "e04"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "e04"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "e04",
+            "name": "传导骚扰抗扰度试验",
+            "name_en": "Conducted Disturbance Immunity Test",
+            "category": "electrical",
+            "category_name": "电磁兼容试验",
+            "tags": [
+              "EMC",
+              "传导",
+              "抗扰度"
+            ],
+            "devices": [
+              "传导干扰测试仪 Conducted Disturbances Tester（输出电压 0~10V，频率分辨率 1Hz，信号正弦波/方波/余弦波）"
+            ],
+            "standards": [
+              "IEC/EN 61000-4-6 & GB/T 17626.6"
+            ],
+            "main_function": "测试电源、触摸屏、信号线对射频场感应传导骚扰的抗干扰能力，评估产品在射频电磁场耦合传导干扰下的工作稳定性。",
+            "case_intro": "触摸屏受干扰后出现跳点、无响应是常见问题，该设备能在选型初期确保触摸屏在特定环境中正常使用。",
+            "how_to": "将传导干扰测试仪通过耦合/去耦网络把扫频干扰信号注入电源、触摸屏或信号线，按要求设定电压与频率扫描，观察产品是否出现功能异常。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T24",
+      "group": "G02_怎么做",
+      "question": "电池循环寿命测试怎么做",
+      "exp_entry": "pap_026",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "p01"
+        }
+      },
+      "exp_ids": [
+        "p01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_026",
+      "reply": "电池循环寿命试验用循环寿命测试仪对电池反复充放电看容量衰减。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_026\", \"reply\":\"电池循环寿命试验用循环寿命测试仪对电池反复充放电看容量衰减。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "p01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "p01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "p01",
+            "name": "锂电池循环寿命试验",
+            "name_en": "Battery Cycle Life Test",
+            "category": "battery",
+            "category_name": "电池试验",
+            "tags": [
+              "电池",
+              "循环",
+              "寿命"
+            ],
+            "devices": [
+              "电池循环寿命测试仪 Battery Life Tester（电压范围 0.5V~20V，电流范围 100mA~10000mA）"
+            ],
+            "standards": [
+              "GB/T 18287-2013《移动电话用锂离子蓄电池及蓄电池组总规范》",
+              "GB 31241-2022《便携式电子产品用锂离子电池和电池组安全要求》"
+            ],
+            "main_function": "依据国家标准和公司内部技术要求，对锂电池寿命等各项性能进行评测，确保 POS 机和电池在不同环境中的使用体验和安全。",
+            "case_intro": "可以对电池进行不同环境温度下的充放电试验，保证电池在数百次循环后，依然能够为 POS 机提供充足的续航能力。",
+            "how_to": "使用电池循环寿命测试仪对电池按设定充放电制度（电压 0.5V~20V、电流 100mA~10000mA）循环充放电，观察容量衰减曲线，评估数百次循环后的续航表现。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法核验匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法核验匹配与质量。\"}"
+    },
+    {
+      "id": "T25",
+      "group": "G02_怎么做",
+      "question": "电池高温安全测试怎么做",
+      "exp_entry": "pap_027",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "p02"
+        }
+      },
+      "exp_ids": [
+        "p02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_027",
+      "reply": "电池高温安全试验把电池放进高温烤箱做高温存储和高温充放电考核安全性。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_027\", \"reply\":\"电池高温安全试验把电池放进高温烤箱做高温存储和高温充放电考核安全性。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "p02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "p02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "p02",
+            "name": "锂电池高温安全试验",
+            "name_en": "Battery High Temperature Safety Test",
+            "category": "battery",
+            "category_name": "电池试验",
+            "tags": [
+              "电池",
+              "高温",
+              "安全"
+            ],
+            "devices": [
+              "高温烤箱 High Temperature Oven（温度范围 RT+5℃~250℃，温度均匀性 ±1.0℃，升温速率 RT~250℃ 约 50 分钟）"
+            ],
+            "standards": [
+              "GB/T 18287-2013《移动电话用锂离子蓄电池及蓄电池组总规范》",
+              "GB 31241-2022《便携式电子产品用锂离子电池和电池组安全要求》"
+            ],
+            "main_function": "对锂电池高温、安全、环境适应等各项性能进行评测，评估电池在高温存储与高温使用条件下的安全性与稳定性，确保 POS 产品整机与电池的使用安全。",
+            "case_intro": "该设备可以对电池进行不同环境温度下的充放电试验，结合高温烤箱评估电池在极端温度下依然能安全稳定工作。",
+            "how_to": "将电池放入高温烤箱按设定温度（最高 250℃）与时长进行高温存储或高温充放电试验，全程监控电压、温度与外观状态，评估是否起火、鼓包等安全风险。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法判定匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法判定匹配与质量。\"}"
+    },
+    {
+      "id": "T26",
+      "group": "G02_怎么做",
+      "question": "EMV非接测试怎么做",
+      "exp_entry": "pap_028",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r01"
+        }
+      },
+      "exp_ids": [
+        "r01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_028",
+      "reply": "EMV非接与接触L1测试用非接测试仪器按EMV规范验证支付接口性能。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_028\", \"reply\":\"EMV非接与接触L1测试用非接测试仪器按EMV规范验证支付接口性能。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "r01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "r01",
+            "name": "EMV非接L1与接触L1性能测试",
+            "name_en": "EMVCo Contactless L1 & Contact L1 Test",
+            "category": "rf",
+            "category_name": "射频与NFC试验",
+            "tags": [
+              "NFC",
+              "EMV",
+              "支付"
+            ],
+            "devices": [
+              "非接测试仪器 NFC Validation and Conformance Tester（RF 输出 30Vpp@50Ω，DAQ 板采样率 150MS/s、分辨率 16bits、带宽 50MHz）"
+            ],
+            "standards": [
+              "EMV Level 1 Specifications for Payment Systems - EMV Contactless Interface Specification"
+            ],
+            "main_function": "用于 EMVCo 非接 L1、接触式 L1 的测试验证，执行 ISO、EMVCo 和 NFC Forum 定义的所有规范模拟与数字测试。",
+            "case_intro": "测试设备的 EMV 非接 L1 和接触式 L1 性能，保证支付终端满足 EMVCo 认证要求。",
+            "how_to": "使用非接测试仪器按 EMV Level 1 规范对产品进行非接射频（载波、调制深度、谐波等）与接触式接口（时序、电平）测试，输出合规性判定报告。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply和API执行结果，无法判定"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply和API执行结果，无法判定\"}"
+    },
+    {
+      "id": "T27",
+      "group": "G02_怎么做",
+      "question": "OTA天线测试怎么做",
+      "exp_entry": "pap_029",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r02"
+        }
+      },
+      "exp_ids": [
+        "r02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_029",
+      "reply": "OTA天线测试在暗室里扫描天线方向图测TRP、TIS等指标。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_029\", \"reply\":\"OTA天线测试在暗室里扫描天线方向图测TRP、TIS等指标。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "r02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "r02",
+            "name": "OTA天线性能测试",
+            "name_en": "OTA Antenna Performance Test",
+            "category": "rf",
+            "category_name": "射频与NFC试验",
+            "tags": [
+              "射频",
+              "OTA",
+              "天线"
+            ],
+            "devices": [
+              "OTA 暗室（支持 2G/3G/4G/Wi-Fi/Bluetooth/GPS 等制式，频段 400MHz-7.5GHz，屏蔽性 70dB，天线 2+11 双极化宽频天线）"
+            ],
+            "standards": [
+              "CTIA 无线设备 OTA 性能测试方法 3.9.5"
+            ],
+            "main_function": "采用 SISO/MIMO 紧凑型天线在近场准确测量被测件的峰值大小及方向性，完成通信终端的 OTA 性能测试（无线通信空中接口测试）与天线测试，测试 EIRP、EIS、TRP、TIS、吞吐量等指标。",
+            "case_intro": "主要开展终端 4G 和 WiFi 天线的 TRP 和 TIS 性能测试，验证产品符合全球当地市场的要求。",
+            "how_to": "将终端放入 OTA 暗室，通过 400MHz-7.5GHz 双极化天线阵列扫描被测件三维辐射方向图，计算 TRP/TIS/EIRP/EIS 与吞吐量，判断是否满足 CTIA 3.9.5 要求。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法进行有效评估。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法进行有效评估。\"}"
+    },
+    {
+      "id": "T28",
+      "group": "G02_怎么做",
+      "question": "NFC兼容测试怎么做",
+      "exp_entry": "pap_030",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r03"
+        }
+      },
+      "exp_ids": [
+        "r03"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_030",
+      "reply": "NFC协议兼容测试用非接测试仪器验证对ISO 14443、Mifare、FeliCa等协议的兼容性。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_030\", \"reply\":\"NFC协议兼容测试用非接测试仪器验证对ISO 14443、Mifare、FeliCa等协议的兼容性。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "r03"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "r03"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "r03",
+            "name": "NFC协议兼容性测试",
+            "name_en": "NFC Protocol Compatibility Test",
+            "category": "rf",
+            "category_name": "射频与NFC试验",
+            "tags": [
+              "NFC",
+              "协议",
+              "兼容"
+            ],
+            "devices": [
+              "非接测试仪器 NFC Validation and Conformance Tester"
+            ],
+            "standards": [
+              "ISO 14443 A/B",
+              "ISO 15693",
+              "Mifare",
+              "FeliCa",
+              "NFC Forum"
+            ],
+            "main_function": "支持 ISO 14443 A/B、ISO 15693、Mifare、FeliCa 及 NFC tags 等协议，执行 ISO、EMVCo 和 NFC Forum 定义的全部规范测试，验证产品 NFC 协议兼容性。",
+            "case_intro": "用于 NFC Forum 的协议测试验证，保证产品与各类非接卡及手机 NFC 的互通兼容。",
+            "how_to": "用非接测试仪器按 ISO 14443 A/B、ISO 15693、Mifare、FeliCa 等协议对样品进行卡片模拟/读卡器测试，逐一验证协议层兼容性与互操作表现。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 1,
+        "api_call_match": 1,
+        "api_ok": 1,
+        "quality": 5,
+        "note": "与期望条目及show_project API一致，可正确展示NFC兼容测试项目。"
+      },
+      "score_raw": "{\"entry_match\":1,\"api_call_match\":1,\"api_ok\":1,\"quality\":5,\"note\":\"与期望条目及show_project API一致，可正确展示NFC兼容测试项目。\"}"
+    },
+    {
+      "id": "T29",
+      "group": "G02_怎么做",
+      "question": "扬声器测试怎么做",
+      "exp_entry": "pap_031",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "a01"
+        }
+      },
+      "exp_ids": [
+        "a01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_031",
+      "reply": "扬声器测试用声学测量系统测频响、失真、杂音和响度。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_031\", \"reply\":\"扬声器测试用声学测量系统测频响、失真、杂音和响度。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "a01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "a01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "a01",
+            "name": "扬声器声学测试",
+            "name_en": "Speaker Acoustic Test",
+            "category": "acoustic",
+            "category_name": "声学测试",
+            "tags": [
+              "声学",
+              "扬声器",
+              "音频"
+            ],
+            "devices": [
+              "声学测量系统 Acoustic Measurement Expert"
+            ],
+            "standards": [
+              "GB/T 12060.5-2011 声系统设备 第5部分：扬声器主要性能测试方法"
+            ],
+            "main_function": "用于测试扬声器的频响、失真、杂音、响度等声学指标，评估产品声音输出质量。",
+            "case_intro": "声学测量系统可测试扬声器的频响、失真、杂音、响度。",
+            "how_to": "将扬声器样品装入声学测试治具，由测量系统播放扫频信号采集频响曲线，测算失真、杂音与响度等指标并与标准限值比对。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply、api_call一致性判定及API执行结果，无法评估"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply、api_call一致性判定及API执行结果，无法评估\"}"
+    },
+    {
+      "id": "T30",
+      "group": "G02_怎么做",
+      "question": "麦克风测试怎么做",
+      "exp_entry": "pap_032",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "a02"
+        }
+      },
+      "exp_ids": [
+        "a02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_032",
+      "reply": "麦克风测试用声学测量系统测频响、失真、杂音和响度，衡量拾音质量。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_032\", \"reply\":\"麦克风测试用声学测量系统测频响、失真、杂音和响度，衡量拾音质量。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "a02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "a02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "a02",
+            "name": "麦克风声学测试",
+            "name_en": "Microphone Acoustic Test",
+            "category": "acoustic",
+            "category_name": "声学测试",
+            "tags": [
+              "声学",
+              "麦克风",
+              "音频"
+            ],
+            "devices": [
+              "声学测量系统 Acoustic Measurement Expert"
+            ],
+            "standards": [
+              "YD/T 1538-2014 数字移动终端音频性能技术要求及测试方法",
+              "GB/T 14198-2012 传声器通用规范"
+            ],
+            "main_function": "用于测试麦克风的频响、失真、杂音、响度等声学指标，评估产品拾音质量与通话性能。",
+            "case_intro": "声学测量系统可测试麦克风的频响、失真、杂音、响度。",
+            "how_to": "将标准声源对准麦克风按设定声压级发声，采集麦克风输出计算频响、失真与噪声指标，比对 YD/T 1538-2014 等标准判定等级。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、实际reply及API执行结果，无法判定"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、实际reply及API执行结果，无法判定\"}"
+    },
+    {
+      "id": "T31",
+      "group": "G02_怎么做",
+      "question": "扫码机器人测试怎么做",
+      "exp_entry": "pap_033",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b01"
+        }
+      },
+      "exp_ids": [
+        "b01"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_033",
+      "reply": "扫码机器人是实验室自研的，自动测景深、识别角度、识别精度和运动容差。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_033\", \"reply\":\"扫码机器人是实验室自研的，自动测景深、识别角度、识别精度和运动容差。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b01"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "b01"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "b01",
+            "name": "扫码机器人测试",
+            "name_en": "Barcode Scan Robot Test",
+            "category": "robot",
+            "category_name": "自动化测试",
+            "tags": [
+              "机器人",
+              "扫码",
+              "自动化"
+            ],
+            "devices": [
+              "扫码机器人（工程师自主研发）Barcode Test Robot"
+            ],
+            "standards": [
+              "内部技术要求（客户要求可定制）"
+            ],
+            "main_function": "自动测试扫码性能，包括景深、识别角度、识别精度、运动容差等指标，评估扫码模块/整机的扫码识别能力。",
+            "case_intro": "扫码机器人由实验室工程师自主研发，可测试扫码性能如景深、识别角度、识别精度、运动容差等。",
+            "how_to": "通过扫码机器人自动移动码样与扫描头位置，逐项测量景深范围、识别角度范围、识别精度与运动容差，自动记录识别成功率。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、实际reply及API执行结果，无法完成一致性判定。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、实际reply及API执行结果，无法完成一致性判定。\"}"
+    },
+    {
+      "id": "T32",
+      "group": "G02_怎么做",
+      "question": "摄像头测试怎么做",
+      "exp_entry": "pap_034",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b02"
+        }
+      },
+      "exp_ids": [
+        "b02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_034",
+      "reply": "摄像头成像质量用照明箱测分辨率、色彩还原和白平衡。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_034\", \"reply\":\"摄像头成像质量用照明箱测分辨率、色彩还原和白平衡。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "b02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "b02",
+            "name": "摄像头成像质量测试",
+            "name_en": "Camera Imaging Quality Test",
+            "category": "robot",
+            "category_name": "自动化测试",
+            "tags": [
+              "摄像头",
+              "成像",
+              "自动化"
+            ],
+            "devices": [
+              "摄像头测试用照明箱（灯箱）"
+            ],
+            "standards": [
+              "内部技术要求（客户要求可定制）"
+            ],
+            "main_function": "在标准照明箱环境下测试摄像头图像质量，包括分辨率、色彩还原、白平衡等指标。",
+            "case_intro": "摄像头测试用照明箱是用于测试图像质量（分辨率、色彩还原、白平衡等）的灯箱设备。",
+            "how_to": "将摄像头对准照明箱的测试卡与标准光源，拍摄标准测试图，软件分析分辨率、色彩还原与白平衡等参数并输出结论。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法判定"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法判定\"}"
+    },
+    {
+      "id": "T33",
+      "group": "G02_怎么做",
+      "question": "整机压力测试怎么做",
+      "exp_entry": "pap_035",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b03"
+        }
+      },
+      "exp_ids": [
+        "b03"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_035",
+      "reply": "整机压力测试由Robot Center机器人做模拟交易、触屏压力和APP可靠性测试。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_035\", \"reply\":\"整机压力测试由Robot Center机器人做模拟交易、触屏压力和APP可靠性测试。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "b03"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "b03"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "b03",
+            "name": "整机压力测试",
+            "name_en": "Whole-device Stress Test (Robot Center)",
+            "category": "robot",
+            "category_name": "自动化测试",
+            "tags": [
+              "机器人",
+              "整机",
+              "压力测试"
+            ],
+            "devices": [
+              "Robot Center 整机测试机器人"
+            ],
+            "standards": [
+              "内部技术要求（客户要求可定制）"
+            ],
+            "main_function": "对整机产品开展压力测试，如模拟交易测试、触屏压力测试及 APP 可靠性测试等，极大提高测试效率、测试强度和测试覆盖率。",
+            "case_intro": "整机测试机器人可以帮助对产品进行模拟交易、触屏压力、APP 可靠性等压力测试，提高测试效率与覆盖率。",
+            "how_to": "将整机接入 Robot Center 测试工位，设定测试脚本执行模拟交易、触屏压力点击与 APP 可靠性循环测试，自动收集异常并生成报告。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply和API执行结果，无法按规则判定。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply和API执行结果，无法按规则判定。\"}"
+    },
+    {
+      "id": "T34",
+      "group": "G02_怎么做",
+      "question": "失效分析怎么做",
+      "exp_entry": "pap_036",
+      "exp_api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "f02"
+        }
+      },
+      "exp_ids": [
+        "f02"
+      ],
+      "exp_total": 1,
+      "assert_api_call": true,
+      "got_entry": "pap_036",
+      "reply": "失效分析用染色渗透或红墨水试验定位失效位置找根因。我来调出具体介绍~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_036\", \"reply\":\"失效分析用染色渗透或红墨水试验定位失效位置找根因。我来调出具体介绍~\"}",
+      "api_call": {
+        "action": "show_project",
+        "payload": {
+          "id": "f02"
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_project",
+        "ok": true,
+        "kind": "detail",
+        "ids": [
+          "f02"
+        ],
+        "total": 1,
+        "detail": {
+          "status": "ok",
+          "project": {
+            "id": "f02",
+            "name": "红墨水试验（失效分析）",
+            "name_en": "Red Ink Test (Failure Analysis)",
+            "category": "failure",
+            "category_name": "失效分析",
+            "tags": [
+              "失效分析",
+              "红墨水",
+              "可靠性"
+            ],
+            "devices": [
+              "红墨水试验设备（Dye & Pry）配合显微镜观察"
+            ],
+            "standards": [
+              "内部失效分析流程"
+            ],
+            "main_function": "通过红墨水渗透染色，直观定位封装体、焊点或结构内部的裂纹与缝隙，为失效根因分析提供可视化证据。",
+            "case_intro": "红墨水试验可直观呈现裂纹分布，帮助确定失效根因并提升产品可靠性。",
+            "how_to": "将失效样品浸入红墨水使墨水渗入裂纹，取出固化后切开样件，在显微镜下观察红色渗透路径即裂纹位置，辅助确定失效机理。"
+          }
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法核验，按保守值填0。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法核验，按保守值填0。\"}"
+    },
+    {
+      "id": "T35",
+      "group": "G03_关键词筛选",
+      "question": "有没有跌落测试的项目",
+      "exp_entry": "pap_037",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "跌落"
+          ]
+        }
+      },
+      "exp_ids": [
+        "m01",
+        "m02",
+        "m03",
+        "m11"
+      ],
+      "exp_total": 4,
+      "assert_api_call": true,
+      "got_entry": "pap_037",
+      "reply": "摔打跌落相关的项目还真不少，我马上为您筛出来~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_037\", \"reply\":\"摔打跌落相关的项目还真不少，我马上为您筛出来~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "跌落"
+          ]
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "m01",
+          "m02",
+          "m03",
+          "m11"
+        ],
+        "total": 4,
+        "detail": {
+          "status": "ok",
+          "total": 4,
+          "projects": [
+            {
+              "id": "m01",
+              "name": "滚筒跌落试验",
+              "name_en": "Rotating Barrel Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "滚筒"
+              ]
+            },
+            {
+              "id": "m02",
+              "name": "重复跌落试验",
+              "name_en": "Repeated Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "重复跌落"
+              ]
+            },
+            {
+              "id": "m03",
+              "name": "包装落下试验",
+              "name_en": "Packaging Drop Tester",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "包装"
+              ]
+            },
+            {
+              "id": "m11",
+              "name": "振动试验",
+              "name_en": "Vibration Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "振动"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法判定；仅知期望为pap_037且应调用filter_projects(keywords:跌落)"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法判定；仅知期望为pap_037且应调用filter_projects(keywords:跌落)\"}"
+    },
+    {
+      "id": "T36",
+      "group": "G03_关键词筛选",
+      "question": "温度相关的测试有哪些",
+      "exp_entry": "pap_038",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "温度"
+          ]
+        }
+      },
+      "exp_ids": [
+        "c01",
+        "c02",
+        "c03",
+        "c04",
+        "p01",
+        "p02"
+      ],
+      "exp_total": 6,
+      "assert_api_call": true,
+      "got_entry": "pap_038",
+      "reply": "温度相关的项目有高低温、湿热、冷热冲击、温度循环和电池高温安全等，我马上为您筛出来~",
+      "route_raw": "{\"kb\":\"project_api\",\"id\":\"pap_038\",\"reply\":\"温度相关的项目有高低温、湿热、冷热冲击、温度循环和电池高温安全等，我马上为您筛出来~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "温度"
+          ]
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "c01",
+          "c02",
+          "c03",
+          "c04",
+          "p01",
+          "p02"
+        ],
+        "total": 6,
+        "detail": {
+          "status": "ok",
+          "total": 6,
+          "projects": [
+            {
+              "id": "c01",
+              "name": "高低温试验",
+              "name_en": "High / Low Temperature Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "高低温",
+                "温度"
+              ]
+            },
+            {
+              "id": "c02",
+              "name": "湿热试验",
+              "name_en": "Damp Heat Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "湿热",
+                "湿度"
+              ]
+            },
+            {
+              "id": "c03",
+              "name": "冷热冲击试验",
+              "name_en": "Thermal Shock Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "冷热冲击",
+                "温度冲击"
+              ]
+            },
+            {
+              "id": "c04",
+              "name": "温度循环试验",
+              "name_en": "Temperature Cycling Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "温度循环"
+              ]
+            },
+            {
+              "id": "p01",
+              "name": "锂电池循环寿命试验",
+              "name_en": "Battery Cycle Life Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "循环",
+                "寿命"
+              ]
+            },
+            {
+              "id": "p02",
+              "name": "锂电池高温安全试验",
+              "name_en": "Battery High Temperature Safety Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "高温",
+                "安全"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法评估匹配与质量。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法评估匹配与质量。\"}"
+    },
+    {
+      "id": "T37",
+      "group": "G03_关键词筛选",
+      "question": "能测屏幕触摸的项目有哪些",
+      "exp_entry": "pap_039",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "触屏",
+            "触摸屏"
+          ]
+        }
+      },
+      "exp_ids": [
+        "e03",
+        "e04",
+        "b03"
+      ],
+      "exp_total": 3,
+      "assert_api_call": true,
+      "got_entry": "pap_039",
+      "reply": "跟屏幕触摸相关的有传导骚扰、脉冲群测试和整机触屏压力测试等，我马上为您筛出来~",
+      "route_raw": "{\"kb\":\"project_api\",\"id\":\"pap_039\",\"reply\":\"跟屏幕触摸相关的有传导骚扰、脉冲群测试和整机触屏压力测试等，我马上为您筛出来~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "触屏",
+            "触摸屏"
+          ]
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "e03",
+          "e04",
+          "b03"
+        ],
+        "total": 3,
+        "detail": {
+          "status": "ok",
+          "total": 3,
+          "projects": [
+            {
+              "id": "e03",
+              "name": "电快速瞬变脉冲群试验",
+              "name_en": "EFT Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "脉冲群",
+                "EFT"
+              ]
+            },
+            {
+              "id": "e04",
+              "name": "传导骚扰抗扰度试验",
+              "name_en": "Conducted Disturbance Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "传导",
+                "抗扰度"
+              ]
+            },
+            {
+              "id": "b03",
+              "name": "整机压力测试",
+              "name_en": "Whole-device Stress Test (Robot Center)",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "机器人",
+                "整机",
+                "压力测试"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "未提供实际路由条目、reply及API执行结果，无法核验；按缺失信息保守判0"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"未提供实际路由条目、reply及API执行结果，无法核验；按缺失信息保守判0\"}"
+    },
+    {
+      "id": "T38",
+      "group": "G04_全部项目",
+      "question": "实验室有哪些实验项目",
+      "exp_entry": "pap_040",
+      "exp_api_call": {
+        "action": "show_projects",
+        "payload": {}
+      },
+      "exp_ids": [
+        "c01",
+        "c02",
+        "c03",
+        "c04",
+        "c05",
+        "m01",
+        "m02",
+        "m03",
+        "m04",
+        "m05",
+        "m06",
+        "m07",
+        "m08",
+        "m09",
+        "m10",
+        "m11",
+        "m12",
+        "e01",
+        "e02",
+        "e03",
+        "e04",
+        "p01",
+        "p02",
+        "r01",
+        "r02",
+        "r03",
+        "a01",
+        "a02",
+        "b01",
+        "b02",
+        "b03",
+        "f01",
+        "f02"
+      ],
+      "exp_total": 33,
+      "assert_api_call": true,
+      "got_entry": "pap_040",
+      "reply": "实验室有八大类实验项目，从气候、机械、电磁兼容到射频、电池、声学、自动化与失效分析，我马上为您全部列出~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_040\", \"reply\":\"实验室有八大类实验项目，从气候、机械、电磁兼容到射频、电池、声学、自动化与失效分析，我马上为您全部列出~\"}",
+      "api_call": {
+        "action": "show_projects",
+        "payload": {}
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "show_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [
+          "c01",
+          "c02",
+          "c03",
+          "c04",
+          "c05",
+          "m01",
+          "m02",
+          "m03",
+          "m04",
+          "m05",
+          "m06",
+          "m07",
+          "m08",
+          "m09",
+          "m10",
+          "m11",
+          "m12",
+          "e01",
+          "e02",
+          "e03",
+          "e04",
+          "p01",
+          "p02",
+          "r01",
+          "r02",
+          "r03",
+          "a01",
+          "a02",
+          "b01",
+          "b02",
+          "b03",
+          "f01",
+          "f02"
+        ],
+        "total": 33,
+        "detail": {
+          "status": "ok",
+          "total": 33,
+          "projects": [
+            {
+              "id": "c01",
+              "name": "高低温试验",
+              "name_en": "High / Low Temperature Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "高低温",
+                "温度"
+              ]
+            },
+            {
+              "id": "c02",
+              "name": "湿热试验",
+              "name_en": "Damp Heat Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "湿热",
+                "湿度"
+              ]
+            },
+            {
+              "id": "c03",
+              "name": "冷热冲击试验",
+              "name_en": "Thermal Shock Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "冷热冲击",
+                "温度冲击"
+              ]
+            },
+            {
+              "id": "c04",
+              "name": "温度循环试验",
+              "name_en": "Temperature Cycling Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "温度循环"
+              ]
+            },
+            {
+              "id": "c05",
+              "name": "盐雾试验",
+              "name_en": "Salt Mist Test",
+              "category": "climate",
+              "category_name": "气候环境试验",
+              "tags": [
+                "气候",
+                "盐雾",
+                "腐蚀"
+              ]
+            },
+            {
+              "id": "m01",
+              "name": "滚筒跌落试验",
+              "name_en": "Rotating Barrel Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "滚筒"
+              ]
+            },
+            {
+              "id": "m02",
+              "name": "重复跌落试验",
+              "name_en": "Repeated Drop Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "重复跌落"
+              ]
+            },
+            {
+              "id": "m03",
+              "name": "包装落下试验",
+              "name_en": "Packaging Drop Tester",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "跌落",
+                "包装"
+              ]
+            },
+            {
+              "id": "m04",
+              "name": "线缆弯折试验",
+              "name_en": "Cable Flexing Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "线缆",
+                "弯折",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m05",
+              "name": "落球冲击试验",
+              "name_en": "Steel Ball Impact Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "落球冲击",
+                "冲击"
+              ]
+            },
+            {
+              "id": "m06",
+              "name": "按键寿命试验",
+              "name_en": "Key Pressing Life Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "按键",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m07",
+              "name": "刷卡寿命试验",
+              "name_en": "Magnetic Card Swiping Life Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "刷卡",
+                "磁卡",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m08",
+              "name": "IC卡插拔试验",
+              "name_en": "Smart Card Insertion/Extraction Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "IC卡",
+                "插拔",
+                "寿命"
+              ]
+            },
+            {
+              "id": "m09",
+              "name": "铅笔硬度试验",
+              "name_en": "Pencil Hardness Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "硬度",
+                "表面"
+              ]
+            },
+            {
+              "id": "m10",
+              "name": "摩擦试验",
+              "name_en": "Abrasion Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "摩擦",
+                "耐磨"
+              ]
+            },
+            {
+              "id": "m11",
+              "name": "振动试验",
+              "name_en": "Vibration Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "振动"
+              ]
+            },
+            {
+              "id": "m12",
+              "name": "万能拉伸试验",
+              "name_en": "Universal Tensile Test",
+              "category": "mechanical",
+              "category_name": "机械环境试验",
+              "tags": [
+                "机械",
+                "拉伸",
+                "力学"
+              ]
+            },
+            {
+              "id": "e01",
+              "name": "静电放电抗扰度试验",
+              "name_en": "ESD Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "静电",
+                "ESD"
+              ]
+            },
+            {
+              "id": "e02",
+              "name": "雷击浪涌试验",
+              "name_en": "Lightning Surge Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "浪涌",
+                "雷击"
+              ]
+            },
+            {
+              "id": "e03",
+              "name": "电快速瞬变脉冲群试验",
+              "name_en": "EFT Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "脉冲群",
+                "EFT"
+              ]
+            },
+            {
+              "id": "e04",
+              "name": "传导骚扰抗扰度试验",
+              "name_en": "Conducted Disturbance Immunity Test",
+              "category": "electrical",
+              "category_name": "电磁兼容试验",
+              "tags": [
+                "EMC",
+                "传导",
+                "抗扰度"
+              ]
+            },
+            {
+              "id": "p01",
+              "name": "锂电池循环寿命试验",
+              "name_en": "Battery Cycle Life Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "循环",
+                "寿命"
+              ]
+            },
+            {
+              "id": "p02",
+              "name": "锂电池高温安全试验",
+              "name_en": "Battery High Temperature Safety Test",
+              "category": "battery",
+              "category_name": "电池试验",
+              "tags": [
+                "电池",
+                "高温",
+                "安全"
+              ]
+            },
+            {
+              "id": "r01",
+              "name": "EMV非接L1与接触L1性能测试",
+              "name_en": "EMVCo Contactless L1 & Contact L1 Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "NFC",
+                "EMV",
+                "支付"
+              ]
+            },
+            {
+              "id": "r02",
+              "name": "OTA天线性能测试",
+              "name_en": "OTA Antenna Performance Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "射频",
+                "OTA",
+                "天线"
+              ]
+            },
+            {
+              "id": "r03",
+              "name": "NFC协议兼容性测试",
+              "name_en": "NFC Protocol Compatibility Test",
+              "category": "rf",
+              "category_name": "射频与NFC试验",
+              "tags": [
+                "NFC",
+                "协议",
+                "兼容"
+              ]
+            },
+            {
+              "id": "a01",
+              "name": "扬声器声学测试",
+              "name_en": "Speaker Acoustic Test",
+              "category": "acoustic",
+              "category_name": "声学测试",
+              "tags": [
+                "声学",
+                "扬声器",
+                "音频"
+              ]
+            },
+            {
+              "id": "a02",
+              "name": "麦克风声学测试",
+              "name_en": "Microphone Acoustic Test",
+              "category": "acoustic",
+              "category_name": "声学测试",
+              "tags": [
+                "声学",
+                "麦克风",
+                "音频"
+              ]
+            },
+            {
+              "id": "b01",
+              "name": "扫码机器人测试",
+              "name_en": "Barcode Scan Robot Test",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "机器人",
+                "扫码",
+                "自动化"
+              ]
+            },
+            {
+              "id": "b02",
+              "name": "摄像头成像质量测试",
+              "name_en": "Camera Imaging Quality Test",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "摄像头",
+                "成像",
+                "自动化"
+              ]
+            },
+            {
+              "id": "b03",
+              "name": "整机压力测试",
+              "name_en": "Whole-device Stress Test (Robot Center)",
+              "category": "robot",
+              "category_name": "自动化测试",
+              "tags": [
+                "机器人",
+                "整机",
+                "压力测试"
+              ]
+            },
+            {
+              "id": "f01",
+              "name": "染色渗透分析（失效分析）",
+              "name_en": "Dye & Pry Failure Analysis",
+              "category": "failure",
+              "category_name": "失效分析",
+              "tags": [
+                "失效分析",
+                "染色渗透",
+                "可靠性"
+              ]
+            },
+            {
+              "id": "f02",
+              "name": "红墨水试验（失效分析）",
+              "name_en": "Red Ink Test (Failure Analysis)",
+              "category": "failure",
+              "category_name": "失效分析",
+              "tags": [
+                "失效分析",
+                "红墨水",
+                "可靠性"
+              ]
+            }
+          ]
+        }
+      },
+      "api_call_match_local": 1,
+      "api_ok_local": 1,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目id、实际reply及API执行结果，无法进行有效判定。"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目id、实际reply及API执行结果，无法进行有效判定。\"}"
+    },
+    {
+      "id": "T39",
+      "group": "G05_兜底",
+      "question": "你们能测防水试验吗",
+      "exp_entry": "pap_999",
+      "exp_api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "${from_user:项目关键词}"
+          ]
+        }
+      },
+      "exp_ids": [],
+      "exp_total": 0,
+      "assert_api_call": false,
+      "got_entry": "pap_999",
+      "reply": "我可以帮您从实验项目库里找一找，把您关心的问题告诉我，我马上调出来~",
+      "route_raw": "{\"kb\":\"project_api\", \"id\":\"pap_999\", \"reply\":\"我可以帮您从实验项目库里找一找，把您关心的问题告诉我，我马上调出来~\"}",
+      "api_call": {
+        "action": "filter_projects",
+        "payload": {
+          "keywords": [
+            "${from_user:项目关键词}"
+          ]
+        }
+      },
+      "reply_exact_local": 1,
+      "api_result": {
+        "action": "filter_projects",
+        "ok": true,
+        "kind": "list",
+        "ids": [],
+        "total": 0,
+        "detail": {
+          "status": "ok",
+          "total": 0,
+          "projects": []
+        }
+      },
+      "api_ok_local": null,
+      "api_call_match_local": null,
+      "score": {
+        "entry_match": 0,
+        "api_call_match": 0,
+        "api_ok": 0,
+        "quality": 1,
+        "note": "缺少实际路由条目、reply及API执行结果，无法评估"
+      },
+      "score_raw": "{\"entry_match\":0,\"api_call_match\":0,\"api_ok\":0,\"quality\":1,\"note\":\"缺少实际路由条目、reply及API执行结果，无法评估\"}"
+    }
+  ]
+}

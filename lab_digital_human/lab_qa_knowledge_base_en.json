@@ -1,0 +1,496 @@
+{
+  "schema_version": "1.0.0",
+  "language": "en",
+  "scene": "lab_digital_human_qa",
+  "generated_at": "2026-11-02",
+  "note": "Main knowledge base for the digital human of the LianDi Key Laboratory of Mobile Payment Research and Application. Each record in qa_knowledge_base has intent (the intent key), keywords (matching phrasings) and answer (the spoken reply of the digital human). The store block is used for display and basic Q&A. Content is based on the laboratory's vectorized knowledge base.",
+  "store": {
+    "name": "LianDi Key Laboratory of Mobile Payment Research and Application",
+    "short_name": "LianDi Mobile Payment Key Laboratory",
+    "en_name": "LianDi Key Laboratory of Mobile Payment Research and Application",
+    "slogan": "Safer payments, warmer technology",
+    "city": "Fuzhou",
+    "founded_year": 2015,
+    "authority": "A provincial key laboratory designated by the Fujian Provincial Department of Science and Technology",
+    "host_unit": "Fujian LianDi Commercial Equipment Co., Ltd.",
+    "supervisor": "Fuzhou Municipal Science and Technology Bureau",
+    "director": "Liu Shiying",
+    "area_sqm": 500,
+    "equipment_invest": "over 30 million RMB",
+    "equipment_sets": "more than 100 sets",
+    "test_robots": 10,
+    "phone_lib": "more than 800 phone models, nearly a thousand devices",
+    "patents": {"invention": 57, "utility_model": 20},
+    "research_directions": ["Mobile payment information security technology", "Application of artificial intelligence in mobile payment", "Application of Internet of Things technology in mobile payment", "Application of big data technology in mobile payment", "Bluetooth payment protocol stack", "QR code scanning and recognition technology", "NFC payment technology", "Automated testing technology", "Face recognition testing technology"]
+  },
+  "qa_knowledge_base": [
+    {
+      "id": "q_001",
+      "category": "Laboratory Overview",
+      "intent": "lab_intro",
+      "question": "What is this place?",
+      "keywords": ["what is this place", "where am I", "what place is this", "this laboratory", "introduce the lab", "tell me about the laboratory", "what does the lab do", "what company are you", "what do you do here"],
+      "answer": "This is the LianDi Key Laboratory of Mobile Payment Research and Application. It was officially designated by the provincial science and technology department in 2015, and it is built and run by Fujian LianDi Commercial Equipment Company. Our focus is applied research in mobile payment. I am Lian, the AI guide here. Welcome to the visit!",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_002",
+      "category": "Laboratory Overview",
+      "intent": "lab_founded",
+      "question": "When was the laboratory founded?",
+      "keywords": ["when was it founded", "founding date", "what year was it built", "how long has it existed", "when was it established", "how many years"],
+      "answer": "The laboratory was founded in 2015. It is a provincial key laboratory designated by the Fujian Provincial Department of Science and Technology. That is more than ten years of growth, and mobile payment technology has kept upgrading all the way. Plenty of eras unlocked together!",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_003",
+      "category": "Laboratory Overview",
+      "intent": "lab_host_unit",
+      "question": "Who hosts the laboratory?",
+      "keywords": ["host unit", "who built it", "which company", "parent company", "affiliated unit", "who funds it"],
+      "answer": "The laboratory is hosted by Fujian LianDi Commercial Equipment Company, and our supervising authority is the Fuzhou Municipal Science and Technology Bureau. LianDi has been making payment terminals for many years, and a lot of our results go straight into its products.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_004",
+      "category": "Laboratory Overview",
+      "intent": "lab_director",
+      "question": "Who is the director of the laboratory?",
+      "keywords": ["laboratory director", "who is in charge", "who leads it", "director name", "who is the head", "leadership"],
+      "answer": "The director is Liu Shiying. We also have a well-organized management system. The academic committee meets every year, and we run a three-level safety responsibility system. The management is quite rigorous. You are welcome to come and see.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_005",
+      "category": "Research Directions",
+      "intent": "lab_research",
+      "question": "What are the research directions of the laboratory?",
+      "keywords": ["research directions", "what do you research", "research areas", "which fields", "what topics", "core technology directions", "research focus"],
+      "answer": "We started with five directions: Bluetooth payment protocol stack, QR code scanning, NFC payment, automated testing and face recognition testing. In recent years we have focused on four areas: information security, artificial intelligence, the Internet of Things and big data, all applied to mobile payment. Which one would you like to hear more about?",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_006",
+      "category": "Laboratory Overview",
+      "intent": "lab_scale",
+      "question": "How big is the laboratory?",
+      "keywords": ["how big", "how many square meters", "floor area", "scale", "how large is the site", "laboratory size"],
+      "answer": "The laboratory covers about 500 square meters. We have invested over 30 million RMB in more than 100 sets of advanced inspection equipment. We also built 10 test robots for different mobile payment scenarios, plus a compatibility lab holding more than 800 phone models. That is a solid scale for this industry.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_007",
+      "category": "Research Achievements",
+      "intent": "lab_patents",
+      "question": "How many patents does the laboratory have?",
+      "keywords": ["patents", "number of patents", "how many patents", "invention patents", "intellectual property", "patent wall"],
+      "answer": "By the end of 2018, the laboratory had 57 invention patents and 20 utility model patents granted. Look at that patent wall over there. Every certificate on it is the work of our researchers.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_008",
+      "category": "Technology and Results - Bluetooth",
+      "intent": "tech_bluetooth",
+      "question": "How good is the Bluetooth protocol stack?",
+      "keywords": ["bluetooth protocol stack", "bluetooth technology", "phone pairing", "bluetooth payment", "quick pass", "bluetooth compatibility"],
+      "answer": "Our Bluetooth payment protocol stack was developed in-house and reaches a world-leading level. It works with more than 800 phone models, and it broke the monopoly foreign companies held in this field. Our invention patent on pairing a Bluetooth phone with a financial card terminal won the Fuzhou Patent Gold Award. Terminals using this technology have shipped over 10 million units, to the United States, India, Russia and more.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_009",
+      "category": "Technology and Results - Scanning",
+      "intent": "tech_scan",
+      "question": "What is the scan robot?",
+      "keywords": ["scan robot", "scanning robot", "scanning test", "QR code recognition", "scanning technology", "A8", "QR code payment", "barcode scanning"],
+      "answer": "Both the scan robot and the scanning technology are our own work. The scan robot project was selected into the Fuzhou science and technology program in 2017, and the National Computer Inspection Center bought it as official inspection equipment. Our LianDi A8 smart POS, with our own scanning algorithm inside, has sold 4 million units and holds about 70 percent of the market. It was also the first to put card payment and phone QR code payment in one terminal.",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_010",
+      "category": "Facilities and Equipment",
+      "intent": "lab_phone_lab",
+      "question": "What is special about the phone compatibility lab?",
+      "keywords": ["compatibility testing", "phone lab", "how many phones", "phone compatibility", "phone library", "compatibility lab"],
+      "answer": "We have a compatibility lab with more than 800 phone models, nearly a thousand devices. It covers Bluetooth, NFC, audio, sound wave, apps and every kind of mobile payment application. When it was built, it filled a gap in this field in China. It also makes sure our products get along well with the phones people actually use.",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_011",
+      "category": "Facilities and Equipment",
+      "intent": "lab_reliability_lab",
+      "question": "Which laboratories handle reliability testing?",
+      "keywords": ["reliability testing", "reliability lab", "environmental testing", "reliability tests", "which lab does testing", "test chambers"],
+      "answer": "Our reliability testing runs across four laboratories: the climatic environment lab, the failure analysis lab, the mechanical environment lab and the combined lab. We test to IEC, MIL, ISO, GB and GJB standards, from high and low temperature and humidity to vibration and drop.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_012",
+      "category": "Facilities and Equipment",
+      "intent": "lab_climatic_lab",
+      "question": "What can the climatic environment lab test?",
+      "keywords": ["climatic environment", "constant temperature and humidity", "thermal shock", "salt spray", "high and low temperature", "humidity test", "climate test"],
+      "answer": "The climatic lab recreates high and low temperatures, humidity, thermal shock and salt spray. We have programmable temperature and humidity chambers, thermal shock testers and salt spray testers. Tests follow IEC, MIL, ISO, GB, GJB or customer requirements.",
+      "related_page": "/teardown/high-low-live.html"
+    },
+    {
+      "id": "q_013",
+      "category": "Facilities and Equipment",
+      "intent": "lab_failure_lab",
+      "question": "What does the failure analysis lab do?",
+      "keywords": ["failure analysis", "metallographic cross section", "dye penetrant", "red ink", "MLCC", "cross section analysis", "failure analysis lab"],
+      "answer": "The failure analysis lab looks at products that failed in testing, in production or in the market. With microscopes and other tools we identify the failure mode, find the cause and confirm the mechanism. Our main methods are metallographic cross-section analysis, dye penetrant testing, also called red ink testing, and MLCC failure analysis. We find the root cause first, then treat it.",
+      "related_page": "/teardown/dye-live.html"
+    },
+    {
+      "id": "q_014",
+      "category": "Facilities and Equipment",
+      "intent": "lab_mechanical_lab",
+      "question": "What equipment does the mechanical environment lab have?",
+      "keywords": ["mechanical environment", "vibration test", "drop test", "ball impact", "electrostatic discharge", "key life", "insertion test", "lightning surge", "mechanical test equipment"],
+      "answer": "The mechanical lab runs vibration and drop tests. Our equipment includes an electrodynamic vibration system, a package drop tester, a repeated drop tester, a tumble tester, a sand and dust chamber, a ball impact tester, an ESD test system, a lightning surge generator, an IC card insertion tester, a key life tester, a cable bend tester, a pencil hardness tester, a friction tester and a universal tensile machine. Some of them, like the IC card insertion tester, we designed ourselves.",
+      "related_page": "/teardown/tumble-live.html"
+    },
+    {
+      "id": "q_015",
+      "category": "Facilities and Equipment",
+      "intent": "lab_machine_vision",
+      "question": "What is in the machine vision lab?",
+      "keywords": ["machine vision", "vision lab", "scanning performance", "depth of field", "recognition angle", "lighting box", "image quality", "white balance"],
+      "answer": "In the machine vision lab you will see the scan robot our engineers built. It tests scanning depth of field, recognition angle, recognition accuracy and motion tolerance. We also have a lighting box for camera image quality, which checks resolution, color reproduction and white balance.",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_016",
+      "category": "Facilities and Equipment",
+      "intent": "lab_robot_center",
+      "question": "Which robots are in the robot test center?",
+      "keywords": ["robot test center", "E850", "test robots", "stress test robot", "NFC test robot", "audio testing", "monitoring board", "full unit testing"],
+      "answer": "Most of the robots here were built by our own engineers. The E850 full-unit test robot automatically checks 18 items before a product leaves the factory. The stress test robot runs simulated transactions, touchscreen pressure and app reliability tests. The NFC test robot checks compatibility with phones against NFC, payPass and payWave standards. We also have an audio test system and a remote monitoring board. It watches production at Zhangzhou Malata in real time and runs automatic statistics.",
+      "related_page": "/teardown/press-live.html"
+    },
+    {
+      "id": "q_017",
+      "category": "Facilities and Equipment",
+      "intent": "lab_mobile_payment_lab",
+      "question": "What does the mobile payment lab do?",
+      "keywords": ["mobile payment lab", "NFC", "audio payment", "sound wave", "payment compatibility", "phone payment compatibility"],
+      "answer": "Our mobile payment lab holds nearly a thousand phones. We use them to verify compatibility between our products and real devices, covering Bluetooth, NFC, audio, sound wave, apps and other mobile payment uses. Whatever phone a customer brings to the terminal, it should connect smoothly.",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_018",
+      "category": "Technology and Results - Going Global",
+      "intent": "tech_germany",
+      "question": "What is the smart POS project for the German market?",
+      "keywords": ["Germany", "German market", "smart POS", "LANDI Global", "PayTec", "overseas project", "Europe", "POS platform"],
+      "answer": "Our new-generation smart POS terminal technology is now used in the German market smart POS platform project run by LANDI Global and PayTec. The terminal runs Android 14 and meets the PCI PTS 7.x financial security standard. The first batch of transaction demos has been validated, and the platform is built to expand, so it can be copied to other European countries. That is an important step in taking our results overseas.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_019",
+      "category": "Cooperation and Influence",
+      "intent": "lab_cooperation",
+      "question": "Which universities and institutions does the laboratory work with?",
+      "keywords": ["industry university research", "university cooperation", "Xiamen University", "Quanzhou Normal University", "Minjiang University", "joint laboratory", "school enterprise cooperation", "research collaboration"],
+      "answer": "We run a joint laboratory with the School of Information Science and Technology at Xiamen University. We also work with Quanzhou Normal University and Minjiang University on papers and visiting researcher appointments. On the industry side, we have handled payment terminal tender inspection for China UnionPay Merchant Services and ERP testing for Meituan.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_020",
+      "category": "Cooperation and Influence",
+      "intent": "lab_influence",
+      "question": "What industry influence and media coverage does the laboratory have?",
+      "keywords": ["industry influence", "media coverage", "visit", "Qualcomm", "UnionPay Merchant Services", "TV station", "618", "industry standing", "influence"],
+      "answer": "We are well known in the industry. Visitors have included the China president of Qualcomm, Qu Shaoguang, general manager of the Bank Card Testing Center, Honeywell's China head, and leaders from Tencent, JD, Lakala, Meituan, China UnionPay Merchant Services and Huaxia Bank. Our smart terminal test robot and scan robot were shown at the 618 exhibition, and provincial and city TV stations and newspapers have covered us many times.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_021",
+      "category": "Academic Research",
+      "intent": "lab_papers",
+      "question": "What papers has the laboratory published?",
+      "keywords": ["papers", "published papers", "academic papers", "publications", "journals", "academic results"],
+      "answer": "We have published seven academic papers. Topics include robotic testing of contactless quick-pass cards, human-computer interaction based on machine vision, advancing smart manufacturing through integration of informatization and industrialization, and BGA chip failure analysis under phone drop impact using strain testing. The machine vision paper was presented at the provincial science association annual meeting.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_022",
+      "category": "Development Plans",
+      "intent": "lab_future",
+      "question": "What are the future directions of the laboratory?",
+      "keywords": ["future", "development", "plan", "direction", "improvement", "next step", "goals", "outlook"],
+      "answer": "We will focus on four areas: information security, artificial intelligence, the Internet of Things and big data, all applied to mobile payment. We will keep working on our weak spots, like research projects, high-level papers, senior talent and open research topics. And we will deepen cooperation between industry, universities and research institutes, so more results reach the market and go global.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_023",
+      "category": "Visits and Cooperation",
+      "intent": "lab_visit",
+      "question": "How do I book a visit to the laboratory?",
+      "keywords": ["visit", "book a visit", "how to get there", "can I visit", "come to your place", "tour request", "appointment", "cooperation inquiry"],
+      "answer": "You are very welcome to visit. For tours and business cooperation, please contact our host, Fujian LianDi Commercial Equipment Company. We will arrange for me and a human guide to receive you, and show you the patent wall, the reliability labs and our test robots.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_101",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_ball_impact",
+      "question": "What does the ball impact test do?",
+      "keywords": ["ball impact", "ball drop test", "steel ball impact", "impact test machine", "drop ball"],
+      "answer": "The ball impact tester drops a steel ball of a set weight from a set height onto the housing or the screen. It checks impact strength and structural reliability. I can show you the 3D teardown demo.",
+      "related_page": "/teardown/ball-live.html"
+    },
+    {
+      "id": "q_102",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_cable_bend",
+      "question": "How is the cable bend test done?",
+      "keywords": ["cable bend", "wire bend", "bend test", "cable life", "swing test"],
+      "answer": "The cable bend tester clamps charging and data cables in a swinging mechanism and bends them again and again. It records how many cycles the cable survives before the wire breaks or the contact fails. That tells us about the durability of the cable and the connector.",
+      "related_page": "/teardown/cable-live.html"
+    },
+    {
+      "id": "q_103",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_card_life",
+      "question": "How does the card swipe life tester work?",
+      "keywords": ["card swipe life", "swipe test", "magnetic stripe card", "swipe speed", "reciprocating swipe"],
+      "answer": "The card swiping life tester mimics a person swiping a card over and over. You can set swipe speed, travel and pressure, and it works with magnetic stripe, chip and dual-interface cards. It counts swipes until the card or the reader fails.",
+      "related_page": "/teardown/card-life-live.html"
+    },
+    {
+      "id": "q_104",
+      "category": "Facilities and Equipment - Failure Analysis",
+      "intent": "tech_dye_penetrant",
+      "question": "What is the red ink dye penetrant test for?",
+      "keywords": ["red ink", "dye penetrant", "penetrant test", "dye test", "micro cracks"],
+      "answer": "The red ink test pushes a dye into cracks and gaps, then we look at the penetration path under a microscope. It locates micro-cracks in solder joints, packages and structural parts. It is one of our standard failure analysis methods.",
+      "related_page": "/teardown/dye-live.html"
+    },
+    {
+      "id": "q_105",
+      "category": "Facilities and Equipment - EMC",
+      "intent": "tech_esd",
+      "question": "How is the electrostatic discharge immunity test done?",
+      "keywords": ["electrostatic discharge", "ESD", "discharge gun", "static immunity", "air discharge", "contact discharge"],
+      "answer": "The ESD test uses a discharge gun to apply contact and air discharges to gaps, keys and connectors. We watch for freezes, reboots or data errors. That shows how well the whole device resists static electricity.",
+      "related_page": "/teardown/esd-live.html"
+    },
+    {
+      "id": "q_106",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_friction",
+      "question": "What does the friction tester measure?",
+      "keywords": ["friction test", "friction machine", "wear resistance", "reciprocating friction", "load friction"],
+      "answer": "The friction tester rubs the product surface again and again with a set load and stroke. It evaluates wear resistance and paint loss risk on coatings, printed markings and housings. Number of cycles and speed are both configurable.",
+      "related_page": "/teardown/friction-live.html"
+    },
+    {
+      "id": "q_107",
+      "category": "Facilities and Equipment - Climatic Environment",
+      "intent": "tech_high_low",
+      "question": "What can the high and low temperature chamber do?",
+      "keywords": ["high low temperature test", "temperature chamber", "high temperature test", "low temperature test", "thermal chamber"],
+      "answer": "The temperature chamber tests the whole device and its components at set high and low temperatures and ramp rates. We check storage, operation and performance after temperature changes.",
+      "related_page": "/teardown/high-low-live.html"
+    },
+    {
+      "id": "q_108",
+      "category": "Facilities and Equipment - Climatic Environment",
+      "intent": "tech_humidity",
+      "question": "How does the constant temperature and humidity chamber work?",
+      "keywords": ["constant temperature and humidity", "damp heat test", "humidity test", "humidity chamber", "temperature humidity"],
+      "answer": "The temperature and humidity chamber controls both at the same time. It simulates hot and humid, or cold and dry conditions. We check insulation, corrosion and functional reliability in damp environments.",
+      "related_page": "/teardown/humidity-live.html"
+    },
+    {
+      "id": "q_109",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_ic_card",
+      "question": "How does the IC card insertion tester work?",
+      "keywords": ["IC card insertion", "card insertion", "insertion test", "gold contacts", "card slot life"],
+      "answer": "The IC card insertion tester holds a card and inserts it into the slot repeatedly. It records travel, speed and cycle count. The focus is contact life between the gold contacts and the card slot, and reading stability.",
+      "related_page": "/teardown/ic-card-live.html"
+    },
+    {
+      "id": "q_110",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_key_life",
+      "question": "How is the key life test done?",
+      "keywords": ["key life", "key test", "keypress test", "key durability", "multi station"],
+      "answer": "The key life tester uses several stations at once to press the power key and the function keys. Stroke and force are configurable, and it counts how many presses a key survives before it fails.",
+      "related_page": "/teardown/key-life-live.html"
+    },
+    {
+      "id": "q_111",
+      "category": "Facilities and Equipment - Acoustics",
+      "intent": "tech_mic",
+      "question": "Which metrics does microphone acoustic testing measure?",
+      "keywords": ["microphone test", "microphone acoustics", "sensitivity", "frequency response", "acoustic testing"],
+      "answer": "Microphone acoustic testing happens in a quiet, anechoic environment. We measure sensitivity, frequency response and background noise. That confirms how recording, calls and voice wake-up perform at different sound pressure levels.",
+      "related_page": "/teardown/mic-live.html"
+    },
+    {
+      "id": "q_112",
+      "category": "Facilities and Equipment - Mobile Payment",
+      "intent": "tech_protocol_compat",
+      "question": "How is NFC protocol compatibility tested?",
+      "keywords": ["protocol compatibility", "NFC protocol", "contactless test", "reading distance", "frequency band"],
+      "answer": "The protocol compatibility test has the device talk to cards and readers on different frequency bands and protocols. We check reading distance, handshake sequence and transaction success rate, all in NFC contactless scenarios.",
+      "related_page": "/teardown/nfc-film.html"
+    },
+    {
+      "id": "q_113",
+      "category": "Facilities and Equipment - Mobile Payment",
+      "intent": "tech_nfc_perf",
+      "question": "How is NFC contactless performance tested?",
+      "keywords": ["NFC test", "contactless performance", "contactless payment", "tap distance", "NFC compatibility"],
+      "answer": "For NFC testing, we place the device in a standard reader field. We verify card detection, protocol handshake, transaction distance and compatibility with many phones and cards, one by one. The goal is stable contactless payment.",
+      "related_page": "/teardown/nfc-live.html"
+    },
+    {
+      "id": "q_114",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_package_drop",
+      "question": "How is the package drop test done?",
+      "keywords": ["package drop", "carton drop", "drop test", "six faces three edges one corner", "pneumatic release"],
+      "answer": "The package drop tester uses a pneumatic release to lift the whole carton to a set height and drop it. Following the six faces, three edges, one corner method, we check how well the packaging and the product inside survive the drop.",
+      "related_page": "/teardown/package-drop-live.html"
+    },
+    {
+      "id": "q_115",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_pencil_hardness",
+      "question": "How is pencil hardness judged?",
+      "keywords": ["pencil hardness", "hardness test", "pencil test", "coating hardness", "scratch"],
+      "answer": "The pencil hardness test scratches the surface with pencils of different hardness at a set angle and pressure. We find the hardest grade that leaves no scratch. That gives the wear resistance of the housing coating.",
+      "related_page": "/teardown/pencil-live.html"
+    },
+    {
+      "id": "q_116",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_press_film",
+      "question": "How is membrane key pressure testing done?",
+      "keywords": ["membrane keys", "membrane pressure", "pressure test", "press test"],
+      "answer": "The pressure head presses membrane keys and touch areas repeatedly with a set displacement and force. We monitor feel, rebound and contact continuity. That way early failures show up before the product ships.",
+      "related_page": "/teardown/press-film.html"
+    },
+    {
+      "id": "q_117",
+      "category": "Facilities and Equipment - Automation",
+      "intent": "tech_press_robot",
+      "question": "How does the full-unit stress test robot work?",
+      "keywords": ["full unit stress", "stress test robot", "touchscreen pressure", "app reliability", "simulated transaction"],
+      "answer": "The stress test robot mimics a person tapping, swiping and inserting a card for a transaction. It runs apps and payment flows over and over from a script, and counts stutters, freezes and failed transactions.",
+      "related_page": "/teardown/press-live.html"
+    },
+    {
+      "id": "q_118",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_repeated_drop",
+      "question": "How does the repeated drop tester work?",
+      "keywords": ["repeated drop", "drop test", "repeated drop machine", "drop durability"],
+      "answer": "The repeated drop tester drops the device over and over from a set height and in set orientations. It records appearance, function and structural condition, and counts drops until something fails. That covers everyday drop durability.",
+      "related_page": "/teardown/repeated-drop-live.html"
+    },
+    {
+      "id": "q_119",
+      "category": "Facilities and Equipment - Climatic Environment",
+      "intent": "tech_salt_spray",
+      "question": "How is the salt spray test done?",
+      "keywords": ["salt spray test", "salt spray chamber", "salt mist", "salt corrosion", "neutral salt spray"],
+      "answer": "The salt spray chamber atomizes salt water and sprays it into a closed chamber. Temperature, salt concentration and spray volume follow the standard. Then we check the corrosion grade of metal parts and coatings.",
+      "related_page": "/teardown/salt-live.html"
+    },
+    {
+      "id": "q_120",
+      "category": "Facilities and Equipment - Automation",
+      "intent": "tech_scan_multi",
+      "question": "How does the scan robot test scanning from many angles?",
+      "keywords": ["scan robot test", "multi angle scanning", "scan distance", "scan rhythm", "scan joints"],
+      "answer": "The scan robot carries a scanning module on a multi-axis arm and moves it to different distances and angles. It checks depth of field, recognition angle, motion tolerance and continuous scan rhythm in batches.",
+      "related_page": "/teardown/scan-robot-live.html"
+    },
+    {
+      "id": "q_121",
+      "category": "Facilities and Equipment - Acoustics",
+      "intent": "tech_speaker",
+      "question": "How is speaker acoustic testing done?",
+      "keywords": ["speaker test", "speaker acoustics", "frequency response", "distortion", "sound pressure level"],
+      "answer": "Speaker testing sweeps frequencies in a free field or an anechoic box. We measure frequency response, sound pressure level and total harmonic distortion. That confirms prompts and voice announcements sound clear.",
+      "related_page": "/teardown/speaker-live.html"
+    },
+    {
+      "id": "q_122",
+      "category": "Facilities and Equipment - EMC",
+      "intent": "tech_surge",
+      "question": "How is the lightning surge test done?",
+      "keywords": ["lightning surge", "surge test", "surge generator", "surge immunity", "combination wave"],
+      "answer": "The surge test uses a combination wave generator to inject set waveform surges into power and communication ports. We watch for resets, damage or communication loss.",
+      "related_page": "/teardown/surge-live.html"
+    },
+    {
+      "id": "q_123",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_tensile",
+      "question": "What does the universal tensile tester measure?",
+      "keywords": ["universal tensile", "tensile test", "tensile machine", "maximum load", "force accuracy"],
+      "answer": "The universal tensile machine pulls dumbbell specimens, wires and solder joints. It records maximum load and elongation at break. That gives the strength of materials and of the connection structures.",
+      "related_page": "/teardown/tensile-live.html"
+    },
+    {
+      "id": "q_124",
+      "category": "Facilities and Equipment - Climatic Environment",
+      "intent": "tech_thermal_cycle",
+      "question": "How is the temperature cycling test set up?",
+      "keywords": ["temperature cycling", "temperature cycle chamber", "thermal cycling", "high low cycle", "ramp rate"],
+      "answer": "The temperature cycling test switches between high and low temperature at a set rate, again and again. It exposes solder fatigue, cracking and performance drift caused by the expansion and contraction of different materials.",
+      "related_page": "/teardown/thermal-cycle-live.html"
+    },
+    {
+      "id": "q_125",
+      "category": "Facilities and Equipment - Climatic Environment",
+      "intent": "tech_thermal_shock",
+      "question": "How does the thermal shock chamber work?",
+      "keywords": ["thermal shock", "thermal shock chamber", "two zone basket", "temperature shock", "transfer time"],
+      "answer": "The thermal shock chamber uses a two-zone basket design. It moves samples quickly between a hot zone and a cold zone. The sudden temperature change exposes thermal stress defects in solder joints and packages.",
+      "related_page": "/teardown/thermal-shock-live.html"
+    },
+    {
+      "id": "q_126",
+      "category": "Facilities and Equipment - Mechanical Environment",
+      "intent": "tech_tumble",
+      "question": "How is the tumble drum drop test done?",
+      "keywords": ["tumble drum", "drum drop", "tumbling drop", "tumble test", "rotating drum"],
+      "answer": "The tumble tester keeps tumbling and dropping the device inside a rotating drum. It simulates random knocks during transport and daily use. Then we inspect the housing, the screen and the internal structure.",
+      "related_page": "/teardown/tumble-live.html"
+    },
+    {
+      "id": "q_127",
+      "category": "Visits and Cooperation",
+      "intent": "tech_3d_catalog",
+      "question": "Is there a 3D catalog of all the test equipment?",
+      "keywords": ["3D catalog", "all equipment", "equipment catalog", "3D demo", "equipment list"],
+      "answer": "We have turned our common reliability equipment into 3D demos you can take apart. There are more than 20 of them. Click one and you can rotate it, take it apart and see how the test works.",
+      "related_page": "/teardown/index.html"
+    },
+    {
+      "id": "q_128",
+      "category": "Visits and Cooperation",
+      "intent": "tech_default_tour",
+      "question": "Take me on a quick tour of the laboratory.",
+      "keywords": ["look around", "take me around", "quick tour", "show me around", "browse"],
+      "answer": "Let me start with one of our automated test machines. You can drag to rotate it, or take it apart to see the inside.",
+      "related_page": "/teardown/idle.html"
+    },
+    {
+      "id": "q_900",
+      "category": "Fallback",
+      "intent": "fallback",
+      "question": "Tell me something else.",
+      "keywords": [],
+      "answer": "I am afraid I do not have material ready for that one. But I can tell you about our research directions, our reliability testing equipment, or the smart POS project in Germany. Which would you like?",
+      "related_page": "/teardown/idle.html"
+    }
+  ]
+}

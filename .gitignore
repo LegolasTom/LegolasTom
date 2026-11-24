@@ -1,0 +1,42 @@
+# ---- 依赖 ----
+node_modules/
+.venv/
+venv/
+env/
+*-venv/
+
+# ---- 环境变量 / 密钥 ----
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ---- 构建产物与打包 ----
+build/
+release/
+_work/packaging/
+_work/crops/
+_work/poster_pages/
+_work/poster_small/
+_work/device_imgs/
+_work/*.png
+*.exe
+*.msi
+*.zip
+*.tar.gz
+
+# ---- 测试/调试产物 ----
+.screenshots/
+*.log
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

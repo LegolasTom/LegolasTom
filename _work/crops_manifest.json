@@ -1,0 +1,967 @@
+{
+ "page_00": [
+  {
+   "crop": "page_00_img00.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "气候环境试验区域"
+  },
+  {
+   "crop": "page_00_img02.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_00_img04.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Area provides all kinds of temperature & humidity related tests, and also dust &"
+  },
+  {
+   "crop": "page_00_img06.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "气候环境试验区域"
+  },
+  {
+   "crop": "page_00_img08.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "气候环境试验区域"
+  },
+  {
+   "crop": "page_00_img10.png",
+   "bbox_pt": [
+    138.0,
+    1540.0,
+    803.0,
+    2426.0
+   ],
+   "size_pt": [
+    665.0,
+    886.0
+   ],
+   "pixels": 1881,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_00_img11.png",
+   "bbox_pt": [
+    867.0,
+    1541.0,
+    1750.0,
+    2204.0
+   ],
+   "size_pt": [
+    883.0,
+    662.0
+   ],
+   "pixels": 2334,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_01": [
+  {
+   "crop": "page_01_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "机械环境试验区域"
+  },
+  {
+   "crop": "page_01_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_01_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Mechanical Environmental Testing Area provides rotating barrel drop, random drop"
+  },
+  {
+   "crop": "page_01_img10.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "机械环境试验区域"
+  },
+  {
+   "crop": "page_01_img12.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "机械环境试验区域"
+  },
+  {
+   "crop": "page_01_img14.png",
+   "bbox_pt": [
+    139.0,
+    1521.0,
+    803.0,
+    2406.0
+   ],
+   "size_pt": [
+    664.0,
+    885.0
+   ],
+   "pixels": 1878,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_01_img15.png",
+   "bbox_pt": [
+    898.0,
+    1476.0,
+    1558.0,
+    2356.0
+   ],
+   "size_pt": [
+    660.0,
+    880.0
+   ],
+   "pixels": 1868,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_02": [
+  {
+   "crop": "page_02_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "静电放电试验区域"
+  },
+  {
+   "crop": "page_02_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_02_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "to static electricity discharges, based on corresponding IEC, GB standards, or c"
+  },
+  {
+   "crop": "page_02_img10.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "静电放电试验区域"
+  },
+  {
+   "crop": "page_02_img12.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "静电放电试验区域"
+  },
+  {
+   "crop": "page_02_img14.png",
+   "bbox_pt": [
+    138.0,
+    1522.0,
+    803.0,
+    2408.0
+   ],
+   "size_pt": [
+    665.0,
+    886.0
+   ],
+   "pixels": 1881,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_02_img15.png",
+   "bbox_pt": [
+    828.0,
+    1534.0,
+    1586.0,
+    2202.0
+   ],
+   "size_pt": [
+    757.0,
+    668.0
+   ],
+   "pixels": 2139,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_03": [
+  {
+   "crop": "page_03_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "机构寿命试验区域"
+  },
+  {
+   "crop": "page_03_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_03_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "customers' demands, including cable flexing, falling ball impact, magnetic card "
+  },
+  {
+   "crop": "page_03_img10.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "机构寿命试验区域"
+  },
+  {
+   "crop": "page_03_img12.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "机构寿命试验区域"
+  },
+  {
+   "crop": "page_03_img14.png",
+   "bbox_pt": [
+    85.0,
+    1540.0,
+    856.0,
+    2205.0
+   ],
+   "size_pt": [
+    771.0,
+    664.0
+   ],
+   "pixels": 2175,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_03_img15.png",
+   "bbox_pt": [
+    796.0,
+    1539.0,
+    1685.0,
+    2206.0
+   ],
+   "size_pt": [
+    888.0,
+    666.0
+   ],
+   "pixels": 2503,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_04": [
+  {
+   "crop": "page_04_img00.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "电池循环寿命测试仪+高温烤箱"
+  },
+  {
+   "crop": "page_04_img02.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "GB 31241-2022 《Lithium ion cells and batteries used in portable electronic equip"
+  },
+  {
+   "crop": "page_04_img04.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Temperature uniformity：±1.0℃"
+  },
+  {
+   "crop": "page_04_img06.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "Battery Life Tester + High Temperature Oven"
+  },
+  {
+   "crop": "page_04_img08.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "电池循环寿命测试仪+高温烤箱"
+  },
+  {
+   "crop": "page_04_img10.png",
+   "bbox_pt": [
+    142.0,
+    2131.0,
+    577.0,
+    2351.0
+   ],
+   "size_pt": [
+    435.0,
+    219.0
+   ],
+   "pixels": 1242,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  },
+  {
+   "crop": "page_04_img11.png",
+   "bbox_pt": [
+    596.0,
+    2131.0,
+    967.0,
+    2351.0
+   ],
+   "size_pt": [
+    371.0,
+    219.0
+   ],
+   "pixels": 1064,
+   "caption": "ensure that the battery of ING can still provide sufficient endurance capacity f"
+  }
+ ],
+ "page_05": [
+  {
+   "crop": "page_05_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "NFC Validation and Conformance Tester"
+  },
+  {
+   "crop": "page_05_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "EMV Level 1 Specifications for Payment Systems-EMV Contactless Interface Specifi"
+  },
+  {
+   "crop": "page_05_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "DAQ board：150 Ms.s,Resolution:16 bits,Bandwidth: 50MHz"
+  },
+  {
+   "crop": "page_05_img10.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "NFC Validation and Conformance Tester"
+  },
+  {
+   "crop": "page_05_img12.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "NFC Validation and Conformance Tester"
+  }
+ ],
+ "page_06": [
+  {
+   "crop": "page_06_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "NFC Validation and Conformance Tester"
+  },
+  {
+   "crop": "page_06_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Antenna：2+11(Dual-polarized broadband antenna)"
+  },
+  {
+   "crop": "page_06_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "测试能力：等效全向辐射功率，等效全向灵敏度，总全向辐射功率，总灵敏度，吞吐量等"
+  },
+  {
+   "crop": "page_06_img10.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "NFC Validation and Conformance Tester"
+  },
+  {
+   "crop": "page_06_img12.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "NFC Validation and Conformance Tester"
+  }
+ ],
+ "page_07": [
+  {
+   "crop": "page_07_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "智能型雷击浪涌发生器"
+  },
+  {
+   "crop": "page_07_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Polarity：Positive/Negative/Alternate"
+  },
+  {
+   "crop": "page_07_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Polarity：Positive/Negative/Alternate"
+  },
+  {
+   "crop": "page_07_img10.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "智能型雷击浪涌发生器"
+  },
+  {
+   "crop": "page_07_img12.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "智能型雷击浪涌发生器"
+  },
+  {
+   "crop": "page_07_img14.png",
+   "bbox_pt": [
+    834.0,
+    1928.0,
+    1557.0,
+    2220.0
+   ],
+   "size_pt": [
+    723.0,
+    292.0
+   ],
+   "pixels": 2042,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_08": [
+  {
+   "crop": "page_08_img00.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "传导干扰测试仪"
+  },
+  {
+   "crop": "page_08_img02.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Sianal：Sine wave/Square wave/"
+  },
+  {
+   "crop": "page_08_img04.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Sianal：Sine wave/Square wave/"
+  },
+  {
+   "crop": "page_08_img06.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "Conducted Disturbances Tester"
+  },
+  {
+   "crop": "page_08_img08.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "传导干扰测试仪"
+  },
+  {
+   "crop": "page_08_img10.png",
+   "bbox_pt": [
+    831.0,
+    1817.0,
+    1558.0,
+    2110.0
+   ],
+   "size_pt": [
+    726.0,
+    293.0
+   ],
+   "pixels": 2052,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ],
+ "page_09": [
+  {
+   "crop": "page_09_img04.png",
+   "bbox_pt": [
+    1456.0,
+    0.0,
+    1701.0,
+    297.0
+   ],
+   "size_pt": [
+    245.0,
+    297.0
+   ],
+   "pixels": 698,
+   "caption": "瞬变脉冲群测试仪"
+  },
+  {
+   "crop": "page_09_img06.png",
+   "bbox_pt": [
+    1224.0,
+    817.0,
+    1701.0,
+    1526.0
+   ],
+   "size_pt": [
+    477.0,
+    709.0
+   ],
+   "pixels": 1342,
+   "caption": "Polarity：Positive/Negative/Alternate"
+  },
+  {
+   "crop": "page_09_img08.png",
+   "bbox_pt": [
+    1135.0,
+    245.0,
+    1701.0,
+    1264.0
+   ],
+   "size_pt": [
+    566.0,
+    1019.0
+   ],
+   "pixels": 1589,
+   "caption": "Polarity：Positive/Negative/Alternate"
+  },
+  {
+   "crop": "page_09_img10.png",
+   "bbox_pt": [
+    599.0,
+    284.0,
+    940.0,
+    626.0
+   ],
+   "size_pt": [
+    341.0,
+    342.0
+   ],
+   "pixels": 981,
+   "caption": "瞬变脉冲群测试仪"
+  },
+  {
+   "crop": "page_09_img12.png",
+   "bbox_pt": [
+    766.0,
+    0.0,
+    1220.0,
+    296.0
+   ],
+   "size_pt": [
+    454.0,
+    296.0
+   ],
+   "pixels": 1295,
+   "caption": "瞬变脉冲群测试仪"
+  },
+  {
+   "crop": "page_09_img14.png",
+   "bbox_pt": [
+    829.0,
+    1819.0,
+    1557.0,
+    2134.0
+   ],
+   "size_pt": [
+    728.0,
+    315.0
+   ],
+   "pixels": 2058,
+   "caption": "Empowering Connections, Creating a Digital Future"
+  }
+ ]
+}

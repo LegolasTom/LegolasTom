@@ -1,0 +1,11 @@
+{
+  "name": "lab-persona-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lab digital human demo: local persona engine + Live2D",
+  "dependencies": {
+    "live2d-widget-model-shizuku": "1.0.5",
+    "pixi-live2d-display": "0.4.0",
+    "pixi.js": "6.5.10"
+  }
+}

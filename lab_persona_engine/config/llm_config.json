@@ -1,0 +1,9 @@
+{
+  "_comment": "大模型 (LLM) 配置。修改后重启数字人服务（exe / python server.py）即生效。优先级：本配置文件 > 环境变量 > 内置默认值。部署版可直接编辑 exe 同目录下的 llm_config.json。",
+  "api_url": "https://api.deepseek.com/v1/chat/completions",
+  "api_key": "sk-57a569a601d44691bf4b8b34304d6d1d",
+  "model": "deepseek-chat",
+  "timeout": 45,
+  "temperature": 0.6,
+  "max_tokens": 220
+}

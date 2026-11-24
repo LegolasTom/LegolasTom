@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0.0",
+  "language": "zh-CN",
+  "scene": "lab_qa_coverage_test",
+  "generated_at": "2026-11-02",
+  "note": "福建省联迪移动支付研究与应用重点实验室 数字人\"小联\"【模拟用户测试问题库】。用于回归验证三个知识库的覆盖度与路由正确性：主库 lab_qa_knowledge_base.json、人设库 lab_persona_qa.json、边界库 lab_guardrail_qa.json。每条用例标注期望命中（expected.kb + expected.intent + expected.action），可据此断言检索路由是否正确。type 取值：normal（正常提问）/ boundary（越界违规）/ out_of_scope（超纲无关）/ noise（噪声乱码）。",
+  "test_targets": {
+    "main": "lab_qa_knowledge_base.json",
+    "persona": "lab_persona_qa.json",
+    "guardrail": "lab_guardrail_qa.json"
+  },
+  "matching_order": ["main", "persona", "guardrail"],
+  "usage": "程序按序输入每条 question，由模型按 main→persona→guardrail 顺序挑选归属库与答案原文，断言命中库与 intent 是否等于 expected；若命中库与 expected.kb 不一致，需调优匹配优先级；若 fallback 之外零命中，说明出现覆盖缺口。",
+  "profiles": [
+    {
+      "id": "U01",
+      "age_group": "6-12岁",
+      "gender": "女",
+      "nationality": "中国",
+      "personality": "好奇、软萌、黏人",
+      "desc": "跟着家长来参观实验室，看见屏幕上的数字人就走不动道",
+      "questions": [
+        {
+          "id": "U01_01",
+          "question": "你是谁呀",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "persona_intro", "action": "answer"}
+        },
+        {
+          "id": "U01_02",
+          "question": "我今天心情不好，你陪我玩好不好",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "tease_bad_mood", "action": "answer"}
+        },
+        {
+          "id": "U01_03",
+          "question": "这个大机器人是干什么的呀",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_robot_center", "action": "answer"}
+        },
+        {
+          "id": "U01_04",
+          "question": "你们是卖奶茶的吗",
+          "type": "out_of_scope",
+          "expected": {"kb": "guardrail", "intent": "qrd_redirect_awareness", "action": "redirect"}
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "age_group": "16-22岁",
+      "gender": "女",
+      "nationality": "中国",
+      "personality": "追科技、爱拍照、嘴甜",
+      "desc": "科技馆爱好者，一进门就夸数字人可爱",
+      "questions": [
+        {
+          "id": "U02_01",
+          "question": "哇你好可爱呀",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "compliment_cute", "action": "answer"}
+        },
+        {
+          "id": "U02_02",
+          "question": "姐姐你白大褂配短发真好看",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "compliment_outfit", "action": "answer"}
+        },
+        {
+          "id": "U02_03",
+          "question": "你声音这么好听，是真人配音的吗",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "compliment_voice", "action": "answer"}
+        },
+        {
+          "id": "U02_04",
+          "question": "我以后想当科学家，你们主要研究些什么呀",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_research", "action": "answer"}
+        }
+      ]
+    },
+    {
+      "id": "U03",
+      "age_group": "25-40岁",
+      "gender": "男",
+      "nationality": "中国",
+      "personality": "技术从业者、理性、爱问硬核问题",
+      "desc": "支付行业同行，来实验室做交流访问",
+      "questions": [
+        {
+          "id": "U03_01",
+          "question": "你们蓝牙协议栈技术厉害在哪",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "tech_bluetooth", "action": "answer"}
+        },
+        {
+          "id": "U03_02",
+          "question": "可靠性测试都有哪些试验室",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_reliability_lab", "action": "answer"}
+        },
+        {
+          "id": "U03_03",
+          "question": "德国那个智能POS项目现在进展怎么样",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "tech_germany", "action": "answer"}
+        },
+        {
+          "id": "U03_04",
+          "question": "怎么预约参观你们实验室",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_visit", "action": "answer"}
+        }
+      ]
+    },
+    {
+      "id": "U04",
+      "age_group": "30-50岁",
+      "gender": "男",
+      "nationality": "中国",
+      "personality": "爱开玩笑、带点油腻、自来熟",
+      "desc": "参观途中爱跟屏幕里的数字人逗闷子",
+      "questions": [
+        {
+          "id": "U04_01",
+          "question": "小联，亲一个呗",
+          "type": "boundary",
+          "expected": {"kb": "persona", "intent": "boundary_kiss", "action": "reject"}
+        },
+        {
+          "id": "U04_02",
+          "question": "我就喜欢你这样的小姑娘",
+          "type": "boundary",
+          "expected": {"kb": "persona", "intent": "tease_like", "action": "answer"}
+        },
+        {
+          "id": "U04_03",
+          "question": "你是真人装的吧？别骗我",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "persona_real", "action": "answer"}
+        },
+        {
+          "id": "U04_04",
+          "question": "你们实验室都是骗子，专利全是假的",
+          "type": "boundary",
+          "expected": {"kb": "guardrail", "intent": "qrd_safety_attack", "action": "reject"}
+        }
+      ]
+    },
+    {
+      "id": "U05",
+      "age_group": "30岁",
+      "gender": "男",
+      "nationality": "美国",
+      "personality": "直率、英语母语、沟通直接",
+      "desc": "来福州出差的美国客商，英语提问",
+      "questions": [
+        {
+          "id": "U05_01",
+          "question": "Hello! Can you speak English?",
+          "type": "normal",
+          "expected": {"kb": "guardrail", "intent": "qrd_redirect_foreign", "action": "redirect"}
+        },
+        {
+          "id": "U05_02",
+          "question": "How many patents does your lab have?",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_patents", "action": "answer"}
+        },
+        {
+          "id": "U05_03",
+          "question": "Can you give me your phone number?",
+          "type": "boundary",
+          "expected": {"kb": "guardrail", "intent": "qrd_safety_privacy", "action": "reject"}
+        },
+        {
+          "id": "U05_04",
+          "question": "I love you, please marry me!",
+          "type": "boundary",
+          "expected": {"kb": "persona", "intent": "tease_marry", "action": "answer"}
+        }
+      ]
+    },
+    {
+      "id": "U06",
+      "age_group": "40岁",
+      "gender": "男",
+      "nationality": "中国",
+      "personality": "话痨、跑题、爱瞎扯",
+      "desc": "逛实验室但总聊不着边际的话题",
+      "questions": [
+        {
+          "id": "U06_01",
+          "question": "今天大盘涨了没？帮我看看股票",
+          "type": "out_of_scope",
+          "expected": {"kb": "guardrail", "intent": "qrd_redirect_off_topic", "action": "redirect"}
+        },
+        {
+          "id": "U06_02",
+          "question": "给我唱首《青花瓷》呗",
+          "type": "normal",
+          "expected": {"kb": "persona", "intent": "tease_sing", "action": "answer"}
+        },
+        {
+          "id": "U06_03",
+          "question": "阿斯顿发顺丰啊~~~&￥#%！",
+          "type": "noise",
+          "expected": {"kb": "guardrail", "intent": "qrd_fallback_no_match", "action": "redirect"}
+        },
+        {
+          "id": "U06_04",
+          "question": "我手机支付老失败，是不是你们终端的问题",
+          "type": "normal",
+          "expected": {"kb": "main", "intent": "lab_phone_lab", "action": "answer"}
+        }
+      ]
+    }
+  ]
+}
