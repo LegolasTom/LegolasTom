@@ -14,6 +14,7 @@
   const previewHome = $('#preview-home');
   const HOME_PAGE = '/teardown/idle.html';
   let previewSrc = HOME_PAGE;
+  let previewLang = 'zh';
   let previewLabel = '';
   let introSeq = 0;
 
@@ -416,6 +417,18 @@
     return wrap;
   }
 
+  function langUrl(href) {
+    // 英文模式下给内嵌演示页附加 lang=en，页面内的 i18n-en.js 据此切换文案
+    try {
+      const u = new URL(href, location.href);
+      if (lang === 'en') u.searchParams.set('lang', 'en');
+      else u.searchParams.delete('lang');
+      return u.pathname + u.search + u.hash;
+    } catch (e) {
+      return href;
+    }
+  }
+
   function showPreview(page, label) {
     if (!page) return;
     introSeq += 1;
@@ -427,9 +440,10 @@
       path = page;
     }
     previewLabel = label || T('demo');
-    if (path !== previewSrc) {
+    if (path !== previewSrc || lang !== previewLang) {
       previewSrc = path;
-      previewFrame.src = path;
+      previewLang = lang;
+      previewFrame.src = langUrl(path);
     } else {
       const file = path.split('/').pop();
       previewTitle.textContent = (previewLabel || T('defaultDemo')) + ' · ' + file;
@@ -468,9 +482,9 @@
       state.userNavPath = new URL(a.href, location.href).pathname;
       previewLabel = T('demo');
       try {
-        previewFrame.contentWindow.location.href = a.href;
+        previewFrame.contentWindow.location.href = langUrl(a.href);
       } catch (e) {
-        previewFrame.src = a.href;
+        previewFrame.src = langUrl(a.href);
       }
     }, true);
     try {
@@ -480,7 +494,7 @@
           introSeq += 1;
           state.userNavPath = p;
           previewLabel = T('demo');
-          previewFrame.src = p;
+          previewFrame.src = langUrl(p);
         }
         return null;
       };
@@ -655,6 +669,9 @@
     history.replaceState(null, '', url);
     previewLabel = '';
     previewTitle.textContent = T('defaultDemo') + ' · ' + (previewSrc || '').split('/').pop();
+    // 让内嵌演示页随语言重载（页面内 i18n-en.js 会根据 lang 切换文案）
+    previewLang = lang;
+    if (previewSrc) previewFrame.src = langUrl(previewSrc);
   }
 
   // ---------------- 事件 ----------------
@@ -703,6 +720,8 @@
   // ---------------- 启动 ----------------
   (async function boot() {
     applyLang();
+    previewLang = lang;
+    if (lang === 'en') previewFrame.src = langUrl(previewSrc);
     addBot({ answer: T('greeting'), source: 'kb' });
     await refreshKbInfo();
     input.focus();
