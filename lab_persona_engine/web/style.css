@@ -68,7 +68,7 @@ button{font-family:inherit;}
 .voice-select option{background:#11151f;color:#dfe6f5;}
 
 .layout{
-  flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);
   grid-template-rows:minmax(0,1fr);
   grid-template-areas:"preview side";
   gap:18px;padding:18px 22px 20px;
