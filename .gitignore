@@ -33,6 +33,7 @@ _work/*.png
 
 # ---- 测试/调试产物 ----
 .screenshots/
+_work/chrome-prof/
 *.log
 
 # ---- 不进仓库的本地资料 ----
